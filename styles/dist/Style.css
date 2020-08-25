@@ -1,0 +1,1037 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.4;
+  background-color: #f2f2f2;
+}
+
+.homePAr {
+  height: 87vh;
+}
+
+#SRLLightbox {
+  background: url("../image//car1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#SRLLightbox .SRLStage {
+  backdrop-filter: blur(12px);
+}
+#SRLLightbox .SRLStage .SRLThumbnailsContainer {
+  display: none;
+}
+#SRLLightbox .SRLStage img {
+  top: 60%;
+  max-width: 100%;
+  max-height: 105%;
+}
+#SRLLightbox .SRLStage .SRLNextButton .SRLNextButton svg {
+  color: white;
+}
+#SRLLightbox .SRLStage .SRLContainer .SRLElementContainer .SRLElementWrapper {
+  height: 100%;
+  top: -50px;
+}
+#SRLLightbox .SRLStage .SRLContainer .SRLCaptionContainer {
+  position: absolute;
+  z-index: 9999;
+  top: 64%;
+}
+#SRLLightbox .SRLStage .SRLContainer .SRLCaptionContainer .SRLCustomCaption .conPar {
+  width: 100% !important;
+  -webkit-box-shadow: 1px 7px 20px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 7px 20px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 6px 20px -7px rgba(0, 0, 0, 0.75);
+  border-radius: 26px;
+}
+#SRLLightbox .SRLStage .SRLContainer .SRLCaptionContainer .SRLCustomCaption .conPar .textCon {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  border-radius: 18px 18px 18px 18px;
+}
+#SRLLightbox .SRLStage .SRLContainer .SRLCaptionContainer .SRLCustomCaption .conPar .textCon .onPar {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+}
+#SRLLightbox .SRLStage .SRLContainer .SRLCaptionContainer .SRLCustomCaption .conPar .textCon .onPar .VildverOn {
+  font-size: 10px;
+  padding: 0px 8px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: #474fa0;
+  color: white;
+  font-weight: 500;
+}
+#SRLLightbox .SRLStage .SRLContainer .SRLCaptionContainer .SRLCustomCaption .conPar .textCon .onPar .OrjIrsenOn {
+  font-size: 10px;
+  padding: 0px 8px;
+  border: 1px solid #474fa0;
+  border-radius: 5px;
+  line-height: 20px;
+  margin-left: 10px;
+  font-weight: 500;
+  color: black;
+}
+#SRLLightbox .SRLStage .SRLContainer .SRLCaptionContainer .SRLCustomCaption .conPar .textCon .titlePar {
+  padding-top: 8px;
+  padding-bottom: 4px;
+}
+#SRLLightbox .SRLStage .SRLContainer .SRLCaptionContainer .SRLCustomCaption .conPar .textCon .titlePar .title {
+  color: #474fa0;
+  font-size: 20px;
+  font-weight: 600;
+}
+#SRLLightbox .SRLStage .SRLContainer .SRLCaptionContainer .SRLCustomCaption .conPar .textCon .line {
+  border-bottom: 2px solid rgba(255, 53, 3, 0.8);
+  width: 90%;
+}
+#SRLLightbox .SRLStage .SRLContainer .SRLCaptionContainer .SRLCustomCaption .conPar .textCon .price {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgba(255, 53, 3, 0.8);
+}
+#SRLLightbox .SRLStage .SRLContainer .SRLCaptionContainer .SRLCustomCaption .conPar .textCon .VzvvleltPar {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  justify-content: space-around;
+}
+#SRLLightbox .SRLStage .SRLContainer .SRLCaptionContainer .SRLCustomCaption .conPar .textCon .VzvvleltPar .VzvvleltCon span {
+  color: black;
+  font-size: 12px;
+  margin-left: 2px;
+  font-weight: 500;
+}
+#SRLLightbox .SRLStage .SRLContainer .SRLCaptionContainer .SRLCustomCaption .conPar .textCon .VzvvleltPar .VzvvleltCon svg {
+  color: black;
+  font-size: 14px;
+}
+#SRLLightbox .SRLStage .SRLContainer .SRLCaptionContainer .SRLCustomCaption .conPar .textCon .Delgerengui {
+  margin-top: 15px;
+  width: 100%;
+  align-self: center;
+  padding: 4px 0px;
+  border-style: none;
+  background-color: #474fa0;
+  color: white;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+#SRLLightbox .SRLStage .SRLContainer .SRLCaptionContainer .SRLCustomCaption .conPar .textCon .Delgerengui:hover {
+  font-weight: 600;
+  -webkit-box-shadow: 1px 7px 20px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 7px 20px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 8px 20px -7px rgba(0, 0, 0, 0.75);
+}
+
+.HeaderPAr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.HeaderPAr .logoPar .title {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 28px;
+  font-weight: 900;
+  color: #474fa0;
+  cursor: pointer;
+}
+.HeaderPAr .logoPar .mn {
+  font-size: 24px;
+  color: #474fa0;
+}
+.HeaderPAr .headerConPar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 54%;
+}
+.HeaderPAr .headerConPar .menuPar span {
+  position: relative;
+  font-size: 20px;
+  line-height: 80px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.HeaderPAr .headerConPar .menuPar span .line1 {
+  top: 28px;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #ff1803;
+  border-radius: 30%;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+.HeaderPAr .headerConPar .menuPar span:hover .line1 {
+  transform: scale(1);
+}
+.HeaderPAr .headerConPar .searchPAr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.HeaderPAr .headerConPar .searchPAr input {
+  border-style: none;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid black;
+}
+.HeaderPAr .headerConPar .searchPAr svg {
+  margin-left: -30px;
+}
+.HeaderPAr .headerConPar button {
+  margin-top: 25px;
+  height: 28px;
+  padding: 0px 18px;
+  background-color: #474fa0;
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+  border-style: none;
+}
+
+.footPar {
+  transform: scale(0);
+  background-color: #f2f2f2;
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  transition: all 0.3s ease;
+}
+.footPar .MenuPAr {
+  position: relative;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  line-height: 62px;
+  width: 25%;
+  text-align: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.footPar .MenuPAr .background {
+  z-index: -1;
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  background-color: #474fa0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: scale(0);
+  transition: all 0.4s ease;
+  border-radius: 100%;
+}
+.footPar .MenuPAr img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+}
+.footPar .MenuPAr:hover .background {
+  transform: scale(1);
+  border-radius: 0%;
+}
+
+.WebNewsPar {
+  width: 100%;
+  height: 75vh;
+  overflow: hidden;
+}
+.WebNewsPar .slick-slider .slick-slide {
+  padding: 20px 5px;
+  margin-right: 50px;
+}
+.WebNewsPar .slick-slider .slick-slide .slick-list {
+  width: 200%;
+}
+.WebNewsPar .conPar {
+  width: 100%;
+  -webkit-box-shadow: 1px 7px 20px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 7px 20px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 6px 20px -7px rgba(0, 0, 0, 0.75);
+  background-color: white;
+  padding: 12px 12px;
+  border-radius: 26px;
+}
+.WebNewsPar .conPar .myImg {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.WebNewsPar .conPar .myImg img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.WebNewsPar .conPar .myImg img:hover {
+  border-radius: 20px;
+  transform: scale(1.1);
+}
+.WebNewsPar .conPar .textCon {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.WebNewsPar .conPar .textCon .onPar {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+}
+.WebNewsPar .conPar .textCon .onPar .VildverOn {
+  font-size: 10px;
+  padding: 0px 8px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: #474fa0;
+  color: white;
+  font-weight: 500;
+}
+.WebNewsPar .conPar .textCon .onPar .OrjIrsenOn {
+  font-size: 10px;
+  padding: 0px 8px;
+  border: 1px solid #474fa0;
+  border-radius: 5px;
+  line-height: 20px;
+  margin-left: 10px;
+  font-weight: 500;
+}
+.WebNewsPar .conPar .textCon .titlePar {
+  padding-top: 8px;
+  padding-bottom: 4px;
+}
+.WebNewsPar .conPar .textCon .titlePar .title {
+  color: #474fa0;
+  font-size: 20px;
+  font-weight: 600;
+}
+.WebNewsPar .conPar .textCon .line {
+  border-bottom: 2px solid rgba(255, 53, 3, 0.8);
+  width: 90%;
+}
+.WebNewsPar .conPar .textCon .price {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgba(255, 53, 3, 0.8);
+}
+.WebNewsPar .conPar .textCon .VzvvleltPar {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  justify-content: space-around;
+}
+.WebNewsPar .conPar .textCon .VzvvleltPar .VzvvleltCon span {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 12px;
+  margin-left: 2px;
+  font-weight: 500;
+}
+.WebNewsPar .conPar .textCon .VzvvleltPar .VzvvleltCon svg {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+}
+.WebNewsPar .conPar .textCon .Delgerengui {
+  margin-top: 15px;
+  width: 100%;
+  align-self: center;
+  padding: 4px 0px;
+  border-style: none;
+  background-color: #474fa0;
+  color: white;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+.WebNewsPar .conPar .textCon .Delgerengui:hover {
+  font-weight: 600;
+  -webkit-box-shadow: 1px 7px 20px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 7px 20px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 8px 20px -7px rgba(0, 0, 0, 0.75);
+}
+
+.otherCarPar {
+  font-family: "Montserrat", sans-serif;
+}
+.otherCarPar .FilterPar {
+  background-color: rgba(255, 53, 3, 0.8);
+}
+.otherCarPar .carsPar {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 10px;
+  -webkit-box-shadow: 1px 7px 20px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 7px 20px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 6px 20px -7px rgba(0, 0, 0, 0.75);
+}
+.otherCarPar .carsPar .imgPar {
+  width: 240px;
+  height: 170px;
+  display: flex;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+.otherCarPar .carsPar .imgPar img {
+  width: 96%;
+  height: 55%;
+  object-fit: cover;
+  align-self: center;
+}
+.otherCarPar .carsPar .textConPar {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-evenly;
+  padding-left: 5px;
+}
+.otherCarPar .carsPar .textConPar .title {
+  font-weight: 600;
+}
+.otherCarPar .carsPar .textConPar .group1 {
+  display: flex;
+  flex-direction: row;
+}
+.otherCarPar .carsPar .textConPar .group1 .content {
+  font-family: "Work Sans", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+}
+.otherCarPar .carsPar .textConPar .group1 .content svg {
+  font-size: 20px;
+  color: #474fa0;
+}
+.otherCarPar .carsPar .textConPar .group1 .content .contentChild {
+  display: flex;
+  flex-direction: column;
+  padding-left: 12px;
+}
+.otherCarPar .carsPar .textConPar .group1 .content .contentChild .value1 {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.otherCarPar .carsPar .textConPar .group1 .content .contentChild .value {
+  line-height: 16px;
+  font-size: 14px;
+}
+.otherCarPar .carsPar .MainMenuPar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 19%;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  padding-left: 10px;
+}
+.otherCarPar .carsPar .MainMenuPar .Price {
+  color: rgba(255, 53, 3, 0.8);
+  font-weight: 600;
+  font-size: 24px;
+  padding-top: 26px;
+}
+.otherCarPar .carsPar .MainMenuPar button {
+  font-size: 14px;
+  background-color: #474fa0;
+  margin-top: 40px;
+  color: white;
+  padding: 4px 15px;
+  border-radius: 8px;
+  border-style: none;
+  transition: all 0.4s ease;
+}
+.otherCarPar .carsPar .MainMenuPar button:hover {
+  background-color: #5c62a7;
+  letter-spacing: 1.2px;
+}
+
+@media only screen and (max-width: 1060px) {
+  .HeaderPAr {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .HeaderPAr .logoPar .title {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 28px;
+    font-weight: 900;
+    color: #474fa0;
+    cursor: pointer;
+  }
+  .HeaderPAr .logoPar .mn {
+    font-size: 24px;
+    color: #474fa0;
+  }
+  .HeaderPAr .headerConPar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 65%;
+  }
+  .HeaderPAr .headerConPar .menuPar span {
+    position: relative;
+    font-size: 20px;
+    line-height: 80px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+  .HeaderPAr .headerConPar .menuPar span .line1 {
+    top: 28px;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #ff1803;
+    border-radius: 30%;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+  }
+  .HeaderPAr .headerConPar .menuPar span:hover .line1 {
+    transform: scale(1);
+  }
+  .HeaderPAr .headerConPar .searchPAr {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .HeaderPAr .headerConPar .searchPAr input {
+    border-style: none;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid black;
+  }
+  .HeaderPAr .headerConPar .searchPAr svg {
+    margin-left: -30px;
+  }
+  .HeaderPAr .headerConPar button {
+    margin-top: 25px;
+    height: 28px;
+    padding: 0px 18px;
+    background-color: #474fa0;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    border-style: none;
+  }
+}
+.backCarPAr {
+  font-family: "Montserrat", sans-serif;
+  padding: 10px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+.backCarPAr .sliderPar .title {
+  margin-bottom: 4px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+.backCarPAr .sliderPar .image-gallery .image-gallery-content .image-gallery-icon .image-gallery-svg {
+  width: 20px;
+}
+.backCarPAr .textPar .group1 {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.backCarPAr .textPar .group1 .content {
+  font-family: "Work Sans", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+  padding-left: 25px;
+}
+.backCarPAr .textPar .group1 .content svg {
+  font-size: 26px;
+  color: #474fa0;
+}
+.backCarPAr .textPar .group1 .content .contentChild {
+  display: flex;
+  flex-direction: column;
+  padding-left: 12px;
+}
+.backCarPAr .textPar .group1 .content .contentChild .value1 {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.backCarPAr .textPar .group1 .content .contentChild .value {
+  line-height: 16px;
+  font-size: 17px;
+}
+.backCarPAr .textPar .DescPAr {
+  padding-left: 30px;
+  width: 90%;
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .HeaderPAr {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    line-height: 55px;
+  }
+  .HeaderPAr .logoPar .title {
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 28px;
+    font-weight: 900;
+    color: #474fa0;
+    cursor: pointer;
+  }
+  .HeaderPAr .logoPar .mn {
+    font-size: 24px;
+    color: #474fa0;
+  }
+  .HeaderPAr .headerConPar {
+    display: none !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 65%;
+  }
+  .HeaderPAr .headerConPar .menuPar span {
+    position: relative;
+    font-size: 20px;
+    line-height: 80px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+  .HeaderPAr .headerConPar .menuPar span .line1 {
+    top: 28px;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #ff1803;
+    border-radius: 30%;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+  }
+  .HeaderPAr .headerConPar .menuPar span:hover .line1 {
+    transform: scale(1);
+  }
+  .HeaderPAr .headerConPar .searchPAr {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .HeaderPAr .headerConPar .searchPAr input {
+    border-style: none;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid black;
+  }
+  .HeaderPAr .headerConPar .searchPAr svg {
+    margin-left: -30px;
+  }
+  .HeaderPAr .headerConPar button {
+    margin-top: 25px;
+    height: 28px;
+    padding: 0px 18px;
+    background-color: #474fa0;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    border-style: none;
+  }
+
+  .MobileCardPar {
+    text-align: center;
+  }
+  .MobileCardPar .imagesPar {
+    margin-left: 45px;
+    margin-top: 30px;
+    width: 80vw;
+    height: 70vh;
+  }
+  .MobileCardPar .imagesPar img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .footPar {
+    transform: scale(1);
+    background-color: #f2f2f2;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .footPar .MenuPAr {
+    position: relative;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    line-height: 62px;
+    width: 25%;
+    text-align: center;
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+  .footPar .MenuPAr .background {
+    z-index: -1;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    background-color: #474fa0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: scale(0);
+    transition: all 0.4s ease;
+    border-radius: 100%;
+  }
+  .footPar .MenuPAr img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+  }
+  .footPar .MenuPAr:hover .background {
+    transform: scale(1);
+    border-radius: 0%;
+  }
+
+  .backCarPAr .sliderPar .title {
+    border-bottom: 1px solid black;
+  }
+  .backCarPAr .sliderPar .image-gallery .image-gallery-content .image-gallery-icon .image-gallery-svg {
+    width: 20px;
+  }
+  .backCarPAr .textPar {
+    margin-top: 16px;
+  }
+  .backCarPAr .textPar .group1 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .backCarPAr .textPar .group1 .content {
+    font-family: "Work Sans", sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    padding-left: 25px;
+  }
+  .backCarPAr .textPar .group1 .content svg {
+    font-size: 22px;
+  }
+  .backCarPAr .textPar .group1 .content .contentChild {
+    display: flex;
+    flex-direction: column;
+    padding-left: 12px;
+  }
+  .backCarPAr .textPar .group1 .content .contentChild .value1 {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .backCarPAr .textPar .group1 .content .contentChild .value {
+    line-height: 14px;
+    font-size: 17px;
+  }
+  .backCarPAr .textPar .DescPAr {
+    padding-left: 30px;
+    width: 90%;
+  }
+
+  .otherCarPar {
+    font-family: "Montserrat", sans-serif;
+  }
+  .otherCarPar .FilterPar {
+    background-color: rgba(255, 53, 3, 0.8);
+  }
+  .otherCarPar .carsPar {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+    -webkit-box-shadow: 1px 7px 20px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 7px 20px -7px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 6px 20px -7px rgba(0, 0, 0, 0.75);
+  }
+  .otherCarPar .carsPar .imgPar {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-right-style: none;
+  }
+  .otherCarPar .carsPar .imgPar img {
+    width: 96%;
+    height: 70%;
+    object-fit: cover;
+    align-self: center;
+  }
+  .otherCarPar .carsPar .textConPar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-evenly;
+    padding-left: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 5px;
+  }
+  .otherCarPar .carsPar .textConPar .title {
+    font-weight: 600;
+  }
+  .otherCarPar .carsPar .textConPar .group1 {
+    display: flex;
+    flex-direction: row;
+  }
+  .otherCarPar .carsPar .textConPar .group1 .content {
+    font-family: "Work Sans", sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+  }
+  .otherCarPar .carsPar .textConPar .group1 .content svg {
+    font-size: 16px;
+    color: #474fa0;
+  }
+  .otherCarPar .carsPar .textConPar .group1 .content .contentChild {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4px;
+  }
+  .otherCarPar .carsPar .textConPar .group1 .content .contentChild .value1 {
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .otherCarPar .carsPar .textConPar .group1 .content .contentChild .value {
+    line-height: 16px;
+    font-size: 12px;
+  }
+  .otherCarPar .carsPar .MainMenuPar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    border-left-style: none;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .otherCarPar .carsPar .MainMenuPar .Price {
+    color: rgba(255, 53, 3, 0.8);
+    font-weight: 600;
+    font-size: 24px;
+    padding-top: 0px;
+  }
+  .otherCarPar .carsPar .MainMenuPar button {
+    font-size: 14px;
+    background-color: #474fa0;
+    margin-top: 0px;
+    color: white;
+    padding: 4px 15px;
+    border-radius: 8px;
+    border-style: none;
+    transition: all 0.4s ease;
+  }
+  .otherCarPar .carsPar .MainMenuPar button:hover {
+    background-color: #5c62a7;
+    letter-spacing: 1.2px;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .WebNewsPar {
+    width: 100%;
+    height: 78vh;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+  }
+  .WebNewsPar .slick-slider .slick-slide {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-right: 0px !important;
+    margin-left: 0px;
+  }
+  .WebNewsPar .slick-slider .slick-slide .slick-list {
+    width: 100px;
+  }
+  .WebNewsPar .conPar {
+    margin-right: 30px;
+    position: relative;
+    width: 80% !important;
+    -webkit-box-shadow: 1px 7px 20px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 7px 20px -7px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 6px 20px -7px rgba(0, 0, 0, 0.75);
+    background-color: white;
+    padding: 12px 12px;
+    border-radius: 26px;
+  }
+  .WebNewsPar .conPar .myImg {
+    width: 100%;
+    height: 66vh;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  .WebNewsPar .conPar .myImg img {
+    width: 100%;
+    height: 66vh;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .WebNewsPar .conPar .myImg img:hover {
+    border-radius: 20px;
+    transform: scale(1.1);
+  }
+  .WebNewsPar .conPar .textCon {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 2.5%;
+    left: 4%;
+    width: 92%;
+    border-radius: 0px 0px 18px 18px;
+  }
+  .WebNewsPar .conPar .textCon .onPar {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+  }
+  .WebNewsPar .conPar .textCon .onPar .VildverOn {
+    font-size: 10px;
+    padding: 0px 8px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: #474fa0;
+    color: white;
+    font-weight: 500;
+  }
+  .WebNewsPar .conPar .textCon .onPar .OrjIrsenOn {
+    font-size: 10px;
+    padding: 0px 8px;
+    border: 1px solid #474fa0;
+    border-radius: 5px;
+    line-height: 20px;
+    margin-left: 10px;
+    font-weight: 500;
+    color: white;
+  }
+  .WebNewsPar .conPar .textCon .titlePar {
+    padding-top: 8px;
+    padding-bottom: 4px;
+  }
+  .WebNewsPar .conPar .textCon .titlePar .title {
+    color: #474fa0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .WebNewsPar .conPar .textCon .line {
+    border-bottom: 2px solid rgba(255, 53, 3, 0.8);
+    width: 90%;
+  }
+  .WebNewsPar .conPar .textCon .price {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgba(255, 53, 3, 0.8);
+  }
+  .WebNewsPar .conPar .textCon .VzvvleltPar {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .WebNewsPar .conPar .textCon .VzvvleltPar .VzvvleltCon span {
+    color: white;
+    font-size: 12px;
+    margin-left: 2px;
+    font-weight: 500;
+  }
+  .WebNewsPar .conPar .textCon .VzvvleltPar .VzvvleltCon svg {
+    color: white;
+    font-size: 14px;
+  }
+  .WebNewsPar .conPar .textCon .Delgerengui {
+    margin-top: 15px;
+    width: 100%;
+    align-self: center;
+    padding: 4px 0px;
+    border-style: none;
+    background-color: #474fa0;
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+  }
+  .WebNewsPar .conPar .textCon .Delgerengui:hover {
+    font-weight: 600;
+    -webkit-box-shadow: 1px 7px 20px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 7px 20px -7px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 8px 20px -7px rgba(0, 0, 0, 0.75);
+  }
+}
+@media (max-aspect-ratio: 1/1) {
+  li {
+    height: 10vh;
+  }
+}
+@media (max-height: 480px) {
+  li {
+    height: 70vh;
+  }
+}
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+  ul {
+    flex-direction: row;
+  }
+  ul li {
+    height: auto;
+    width: 100%;
+  }
+  ul li img {
+    width: 100%;
+    max-height: 75vh;
+    min-width: 0;
+  }
+}
