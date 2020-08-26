@@ -1,12 +1,23 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import Slider from "react-slick";
 import { GoDashboard } from 'react-icons/go'
-import { GiAutoRepair, GiCartwheel,  } from 'react-icons/gi'
+import { GiAutoRepair, GiCartwheel, } from 'react-icons/gi'
 import { GoLocation } from "react-icons/go";
 import { MdLocationCity } from "react-icons/md";
-import { SRLWrapper,useLightbox  } from "simple-react-lightbox";
+import { SRLWrapper, useLightbox } from "simple-react-lightbox";
+import { motion } from 'framer-motion'
 
 
+
+let easing = [0.5, 0.9, 0.16, 0.95];
+const textVariants = {
+    exit: { x: 300, opacity: 0.8, transition: { duration: 0.9, ease: easing } },
+    enter: {
+        x: 0,
+        opacity: 1,
+        transition: { delay: 0.2, duration: 0.9, ease: easing }
+    }
+};
 
 const settings = {
     autoplay: false,
@@ -242,266 +253,282 @@ export class WebCard extends Component {
 
     constructor(props) {
         super(props)
-    
+
         this.state = {
-             className: 'haha'
+            className: 'haha'
         }
     }
-    
+
 
 
 
     render() {
-    return (
-        <div className="WebNewsPar">
-            <SRLWrapper options={options} customCaptions={customCaptions}>
+        return (
+            <div className="WebNewsPar">
+                <SRLWrapper options={options} customCaptions={customCaptions}>
 
-                <Slider {...settings}>
-                    <div className="conPar" >
-                        <div className="myImg" >
-                            <img  src={require('../../image/car5.jpg')} />
-                        </div>
-                        <div className="textCon">
-                            <div className="onPar">
-                                <span className="VildverOn">2016</span>
-                                <span className="OrjIrsenOn">2019</span>
-                            </div>
-                            <div className="titlePar">
-                                <span className="title">ROYAL GARDEN</span>
-                            </div>
-                            <div className="line"></div>
-                            <span className="price">55сая 600 мянга ₮</span>
-                            <div className="VzvvleltPar">
-                                <div className="VzvvleltCon">
-                                    <GoLocation />
-                                    <span>Баянзүрх</span>
+                    <motion.div initial="exit" animate="enter" exit="exit">
+
+                        <Slider {...settings}>
+                            <motion.div variants={textVariants}>
+                                <div className="conPar" >
+                                    <div className="myImg" >
+                                        <img src={require('../../image/car5.jpg')} />
+                                    </div>
+                                    <div className="textCon">
+                                        <div className="onPar">
+                                            <span className="VildverOn">2016</span>
+                                            <span className="OrjIrsenOn">2019</span>
+                                        </div>
+                                        <div className="titlePar">
+                                            <span className="title">ROYAL GARDEN</span>
+                                        </div>
+                                        <div className="line"></div>
+                                        <span className="price">55сая 600 мянга ₮</span>
+                                        <div className="VzvvleltPar">
+                                            <div className="VzvvleltCon">
+                                                <GoLocation />
+                                                <span>Баянзүрх</span>
+                                            </div>
+                                            <div className="VzvvleltCon">
+                                                <MdLocationCity />
+                                                <span>16-р хороолол</span>
+                                            </div>
+
+
+                                        </div>
+                                        <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
+                                    </div>
                                 </div>
-                                <div className="VzvvleltCon">
-                                    <MdLocationCity />
-                                    <span>16-р хороолол</span>
+                            </motion.div>
+
+
+                            <motion.div variants={textVariants}>
+
+                                <div className="conPar" >
+                                    <div className="myImg" >
+                                        <img src={require('../../image/car1.jpg')} />
+                                    </div>
+                                    <div className="textCon">
+                                        <div className="onPar">
+                                            <span className="VildverOn">2016</span>
+                                            <span className="OrjIrsenOn">2019</span>
+                                        </div>
+                                        <div className="titlePar">
+                                            <span className="title">TOYOTA PRIUS 20</span>
+                                        </div>
+                                        <div className="line"></div>
+                                        <span className="price">5сая 600 мянга ₮</span>
+                                        <div className="VzvvleltPar">
+                                            <div className="VzvvleltCon">
+                                                <GoDashboard />
+                                                <span>30k</span>
+                                            </div>
+                                            <div className="VzvvleltCon">
+                                                <GiAutoRepair />
+                                                <span>Auto</span>
+                                            </div>
+                                            <div className="VzvvleltCon">
+                                                <GiCartwheel />
+                                                <span>Petrol</span>
+                                            </div>
+
+                                        </div>
+                                        <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
+                                    </div>
                                 </div>
-                             
-
-                            </div>
-                            <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-                        </div>
-                    </div>
+                            </motion.div>
 
 
-                    <div className="conPar" >
-                        <div className="myImg" >
-                            <img src={require('../../image/car1.jpg')} />
-                        </div>
-                        <div className="textCon">
-                            <div className="onPar">
-                                <span className="VildverOn">2016</span>
-                                <span className="OrjIrsenOn">2019</span>
-                            </div>
-                            <div className="titlePar">
-                                <span className="title">TOYOTA PRIUS 20</span>
-                            </div>
-                            <div className="line"></div>
-                            <span className="price">5сая 600 мянга ₮</span>
-                            <div className="VzvvleltPar">
-                                <div className="VzvvleltCon">
-                                    <GoDashboard />
-                                    <span>30k</span>
+                            <motion.div variants={textVariants}>
+                                <div className="conPar" >
+                                    <div className="myImg" >
+
+
+                                        <img src={require('../../image/car3.jpg')} />
+
+                                    </div>
+                                    <div className="textCon">
+                                        <div className="onPar">
+                                            <span className="VildverOn">2016</span>
+                                            <span className="OrjIrsenOn">2019</span>
+                                        </div>
+                                        <div className="titlePar">
+                                            <span className="title">TOYOTA PRIUS 20</span>
+                                        </div>
+                                        <div className="line"></div>
+                                        <span className="price">5сая 600 мянга ₮</span>
+                                        <div className="VzvvleltPar">
+                                            <div className="VzvvleltCon">
+                                                <GoDashboard />
+                                                <span>30k</span>
+                                            </div>
+                                            <div className="VzvvleltCon">
+                                                <GiAutoRepair />
+                                                <span>Auto</span>
+                                            </div>
+                                            <div className="VzvvleltCon">
+                                                <GiCartwheel />
+                                                <span>Petrol</span>
+                                            </div>
+
+                                        </div>
+                                        <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
+                                    </div>
                                 </div>
-                                <div className="VzvvleltCon">
-                                    <GiAutoRepair />
-                                    <span>Auto</span>
-                                </div>
-                                <div className="VzvvleltCon">
-                                    <GiCartwheel />
-                                    <span>Petrol</span>
-                                </div>
+                            </motion.div>
 
+                            <motion.div variants={textVariants}>
+                                <div className="conPar" >
+                                    <div className="myImg" >
+
+
+                                        <img src={require('../../image/car1.jpg')} />
+
+                                    </div>
+                                    <div className="textCon">
+                                        <div className="onPar">
+                                            <span className="VildverOn">2016</span>
+                                            <span className="OrjIrsenOn">2019</span>
+                                        </div>
+                                        <div className="titlePar">
+                                            <span className="title">TOYOTA PRIUS 20</span>
+                                        </div>
+                                        <div className="line"></div>
+                                        <span className="price">5сая 600 мянга ₮</span>
+                                        <div className="VzvvleltPar">
+                                            <div className="VzvvleltCon">
+                                                <GoDashboard />
+                                                <span>30k</span>
+                                            </div>
+                                            <div className="VzvvleltCon">
+                                                <GiAutoRepair />
+                                                <span>Auto</span>
+                                            </div>
+                                            <div className="VzvvleltCon">
+                                                <GiCartwheel />
+                                                <span>Petrol</span>
+                                            </div>
+
+                                        </div>
+                                        <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
+                                    </div>
+                                </div>
+                            </motion.div>
+                            <div className="conPar" >
+                                <div className="myImg" >
+
+
+                                    <img src={require('../../image/car4.jpg')} />
+
+                                </div>
+                                <div className="textCon">
+                                    <div className="onPar">
+                                        <span className="VildverOn">2016</span>
+                                        <span className="OrjIrsenOn">2019</span>
+                                    </div>
+                                    <div className="titlePar">
+                                        <span className="title">TOYOTA PRIUS 20</span>
+                                    </div>
+                                    <div className="line"></div>
+                                    <span className="price">5сая 600 мянга ₮</span>
+                                    <div className="VzvvleltPar">
+                                        <div className="VzvvleltCon">
+                                            <GoDashboard />
+                                            <span>30k</span>
+                                        </div>
+                                        <div className="VzvvleltCon">
+                                            <GiAutoRepair />
+                                            <span>Auto</span>
+                                        </div>
+                                        <div className="VzvvleltCon">
+                                            <GiCartwheel />
+                                            <span>Petrol</span>
+                                        </div>
+
+                                    </div>
+                                    <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
+                                </div>
                             </div>
-                            <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-                        </div>
-                    </div>
-                    <div className="conPar" >
-                        <div className="myImg" >
+                            <div className="conPar" >
+                                <div className="myImg" >
 
 
-                            <img src={require('../../image/car3.jpg')} />
+                                    <img src={require('../../image/car5.jpg')} />
 
-                        </div>
-                        <div className="textCon">
-                            <div className="onPar">
-                                <span className="VildverOn">2016</span>
-                                <span className="OrjIrsenOn">2019</span>
-                            </div>
-                            <div className="titlePar">
-                                <span className="title">TOYOTA PRIUS 20</span>
-                            </div>
-                            <div className="line"></div>
-                            <span className="price">5сая 600 мянга ₮</span>
-                            <div className="VzvvleltPar">
-                                <div className="VzvvleltCon">
-                                    <GoDashboard />
-                                    <span>30k</span>
                                 </div>
-                                <div className="VzvvleltCon">
-                                    <GiAutoRepair />
-                                    <span>Auto</span>
-                                </div>
-                                <div className="VzvvleltCon">
-                                    <GiCartwheel />
-                                    <span>Petrol</span>
-                                </div>
+                                <div className="textCon">
+                                    <div className="onPar">
+                                        <span className="VildverOn">2016</span>
+                                        <span className="OrjIrsenOn">2019</span>
+                                    </div>
+                                    <div className="titlePar">
+                                        <span className="title">TOYOTA PRIUS 20</span>
+                                    </div>
+                                    <div className="line"></div>
+                                    <span className="price">5сая 600 мянга ₮</span>
+                                    <div className="VzvvleltPar">
+                                        <div className="VzvvleltCon">
+                                            <GoDashboard />
+                                            <span>30k</span>
+                                        </div>
+                                        <div className="VzvvleltCon">
+                                            <GiAutoRepair />
+                                            <span>Auto</span>
+                                        </div>
+                                        <div className="VzvvleltCon">
+                                            <GiCartwheel />
+                                            <span>Petrol</span>
+                                        </div>
 
+                                    </div>
+                                    <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
+                                </div>
                             </div>
-                            <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-                        </div>
-                    </div>
-                    <div className="conPar" >
-                        <div className="myImg" >
+                            <div className="conPar" >
+                                <div className="myImg" >
 
 
-                            <img src={require('../../image/car1.jpg')} />
+                                    <img src={require('../../image/car3.jpg')} />
 
-                        </div>
-                        <div className="textCon">
-                            <div className="onPar">
-                                <span className="VildverOn">2016</span>
-                                <span className="OrjIrsenOn">2019</span>
-                            </div>
-                            <div className="titlePar">
-                                <span className="title">TOYOTA PRIUS 20</span>
-                            </div>
-                            <div className="line"></div>
-                            <span className="price">5сая 600 мянга ₮</span>
-                            <div className="VzvvleltPar">
-                                <div className="VzvvleltCon">
-                                    <GoDashboard />
-                                    <span>30k</span>
                                 </div>
-                                <div className="VzvvleltCon">
-                                    <GiAutoRepair />
-                                    <span>Auto</span>
-                                </div>
-                                <div className="VzvvleltCon">
-                                    <GiCartwheel />
-                                    <span>Petrol</span>
-                                </div>
+                                <div className="textCon">
+                                    <div className="onPar">
+                                        <span className="VildverOn">2016</span>
+                                        <span className="OrjIrsenOn">2019</span>
+                                    </div>
+                                    <div className="titlePar">
+                                        <span className="title">TOYOTA PRIUS 20</span>
+                                    </div>
+                                    <div className="line"></div>
+                                    <span className="price">5сая 600 мянга ₮</span>
+                                    <div className="VzvvleltPar">
+                                        <div className="VzvvleltCon">
+                                            <GoDashboard />
+                                            <span>30k</span>
+                                        </div>
+                                        <div className="VzvvleltCon">
+                                            <GiAutoRepair />
+                                            <span>Auto</span>
+                                        </div>
+                                        <div className="VzvvleltCon">
+                                            <GiCartwheel />
+                                            <span>Petrol</span>
+                                        </div>
 
+                                    </div>
+                                    <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
+                                </div>
                             </div>
-                            <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-                        </div>
-                    </div>
-                    <div className="conPar" >
-                        <div className="myImg" >
 
+                        </Slider>
+                    </motion.div>
 
-                            <img src={require('../../image/car4.jpg')} />
+                </SRLWrapper>
 
-                        </div>
-                        <div className="textCon">
-                            <div className="onPar">
-                                <span className="VildverOn">2016</span>
-                                <span className="OrjIrsenOn">2019</span>
-                            </div>
-                            <div className="titlePar">
-                                <span className="title">TOYOTA PRIUS 20</span>
-                            </div>
-                            <div className="line"></div>
-                            <span className="price">5сая 600 мянга ₮</span>
-                            <div className="VzvvleltPar">
-                                <div className="VzvvleltCon">
-                                    <GoDashboard />
-                                    <span>30k</span>
-                                </div>
-                                <div className="VzvvleltCon">
-                                    <GiAutoRepair />
-                                    <span>Auto</span>
-                                </div>
-                                <div className="VzvvleltCon">
-                                    <GiCartwheel />
-                                    <span>Petrol</span>
-                                </div>
-
-                            </div>
-                            <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-                        </div>
-                    </div>
-                    <div className="conPar" >
-                        <div className="myImg" >
-
-
-                            <img src={require('../../image/car5.jpg')} />
-
-                        </div>
-                        <div className="textCon">
-                            <div className="onPar">
-                                <span className="VildverOn">2016</span>
-                                <span className="OrjIrsenOn">2019</span>
-                            </div>
-                            <div className="titlePar">
-                                <span className="title">TOYOTA PRIUS 20</span>
-                            </div>
-                            <div className="line"></div>
-                            <span className="price">5сая 600 мянга ₮</span>
-                            <div className="VzvvleltPar">
-                                <div className="VzvvleltCon">
-                                    <GoDashboard />
-                                    <span>30k</span>
-                                </div>
-                                <div className="VzvvleltCon">
-                                    <GiAutoRepair />
-                                    <span>Auto</span>
-                                </div>
-                                <div className="VzvvleltCon">
-                                    <GiCartwheel />
-                                    <span>Petrol</span>
-                                </div>
-
-                            </div>
-                            <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-                        </div>
-                    </div>
-                    <div className="conPar" >
-                        <div className="myImg" >
-
-
-                            <img src={require('../../image/car3.jpg')} />
-
-                        </div>
-                        <div className="textCon">
-                            <div className="onPar">
-                                <span className="VildverOn">2016</span>
-                                <span className="OrjIrsenOn">2019</span>
-                            </div>
-                            <div className="titlePar">
-                                <span className="title">TOYOTA PRIUS 20</span>
-                            </div>
-                            <div className="line"></div>
-                            <span className="price">5сая 600 мянга ₮</span>
-                            <div className="VzvvleltPar">
-                                <div className="VzvvleltCon">
-                                    <GoDashboard />
-                                    <span>30k</span>
-                                </div>
-                                <div className="VzvvleltCon">
-                                    <GiAutoRepair />
-                                    <span>Auto</span>
-                                </div>
-                                <div className="VzvvleltCon">
-                                    <GiCartwheel />
-                                    <span>Petrol</span>
-                                </div>
-
-                            </div>
-                            <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-                        </div>
-                    </div>
-
-                </Slider>
-            </SRLWrapper>
-
-        </div>
-    )
-}
+            </div>
+        )
+    }
 }
 
 export default WebCard
@@ -515,7 +542,7 @@ export default WebCard
 //     render() {
 //         return (
 //             <div>
-                
+
 //             </div>
 //         )
 //     }

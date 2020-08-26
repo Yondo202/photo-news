@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { Container, Col, Row } from 'react-bootstrap'
 import { TiSocialYoutubeCircular } from 'react-icons/ti'
 import { FaRegMoneyBillAlt } from 'react-icons/fa'
@@ -9,6 +9,8 @@ import { GiCartwheel, GiPoliceCar } from 'react-icons/gi'
 import { MdUpdate, MdSystemUpdateAlt, MdKeyboardTab } from 'react-icons/md'
 
 import ImageGallery from 'react-image-gallery';
+
+
 
 const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -30,6 +32,23 @@ const item = {
         opacity: 1
     }
 };
+
+
+
+
+let easing = [0.175, 0.85, 0.42, 0.96];
+
+
+const textVariants = {
+    exit: { y: 100, opacity: 0, transition: { duration: 0.5, ease: easing } },
+    enter: {
+        y: 0,
+        opacity: 1,
+        transition: { delay: 0.2, duration: 0.6, ease: easing }
+    }
+};
+
+
 
 function AboutCars({ isVisible }) {
 
@@ -56,10 +75,10 @@ function AboutCars({ isVisible }) {
         },
     ]
 
- 
+
     const handleOnDragStart = (e) => e.preventDefault()
     return (
-        <div style={{ marginBottom: 75 }}>
+        <div style={{ marginBottom: 50 }}>
             {/* <motion.ul
                 className="container"
                 variants={container}
@@ -88,94 +107,105 @@ function AboutCars({ isVisible }) {
                <div>hahahahhahahahah</div>
             </motion.div> */}
 
+
+
             <Container className="backCarPAr">
-                <Row style={{ marginTop: 10 }}>
-                    <Col md={7}>
-                        <div className="sliderPar">
-                           
-                            <ImageGallery items={myImage} thumbnailPosition={"left"} />
-                            {/* <AliceCarousel mouseTrackingEnabled>
+                <motion.div initial="exit" animate="enter" exit="exit">
+                    <motion.div variants={textVariants}>
+                        <Row style={{ marginTop: 10 }}>
+
+                            <Col md={7}>
+                                <div className="sliderPar">
+                                    <ImageGallery items={myImage} thumbnailPosition={"left"} />
+                                    {/* <AliceCarousel mouseTrackingEnabled>
                                 <img src={require('../../image/car4.jpg')} onDragStart={handleOnDragStart} className="yours-custom-class" />
                                 <img src={require('../../image/car3.jpg')} onDragStart={handleOnDragStart} className="yours-custom-class" />
                                 <img src={require('../../image/car3.jpg')} onDragStart={handleOnDragStart} className="yours-custom-class" />
                                 <img src={require('../../image/car3.jpg')} onDragStart={handleOnDragStart} className="yours-custom-class" />
 
                             </AliceCarousel> */}
+                                </div>
 
 
-                        </div>
-                        {/* <div className="imagePar">
+
+
+                                {/* <div className="imagePar">
                             <img src={require('../../image/car1.jpg')} />
                         </div> */}
-                    </Col>
-                    <Col md={5}>
-                        <div className="textPar">
-                        <h4 className="title">TOYOTA PRIUS 20</h4>
-                            <div className="group1">
-                                <div className="content">
-                                    <RiMastercardLine />
-                                    <div className="contentChild">
-                                        <span className="value1">Үйлдвэр:</span>
-                                        <span className="value">Honda</span>
-                                    </div>
-                                </div>
-                                <div className="content content2">
-                                    <MdSystemUpdateAlt />
-                                    <div className="contentChild">
-                                        <span className="value1">Орж ирсэн:</span>
-                                        <span className="value">2018 он</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="group1">
-                                <div className="content">
-                                    <FaRegMoneyBillAlt />
-                                    <div className="contentChild">
-                                        <span className="value1">Үнэ:</span>
-                                        <span className="value">8сая 600мянга ₮</span>
-                                    </div>
-                                </div>
-                                <div className="content content2">
-                                    <MdUpdate />
-                                    <div className="contentChild">
-                                        <span className="value1">Үйлдвэрлэсэн:</span>
-                                        <span className="value">2012 он</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="group1">
-                                <div className="content">
-                                    <GiCartwheel />
-                                    <div className="contentChild">
-                                        <span className="value1">Хөдөлгүүр:</span>
-                                        <span className="value">Цахилгаан</span>
-                                    </div>
-                                </div>
-                                <div className="content content2">
-                                    <GiPoliceCar />
-                                    <div className="contentChild">
-                                        <span className="value1">Марк:</span>
-                                        <span className="value">Adiu RX500</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="DescPAr">
-                                <span>Toyota S Aqua 2014 /Сая орж ирсэн гааль бичигтэй 2020/
+                            </Col>
+                            <Col md={5}>
 
-                                -Урьдчилгаа 2.6 сая төлөөд зээлээр аваарай сард 500K
+                                <div className="textPar">
+                                    <h4 className="title">TOYOTA PRIUS 20</h4>
+                                    <div className="group1">
+                                        <div className="content">
+                                            <RiMastercardLine />
+                                            <div className="contentChild">
+                                                <span className="value1">Үйлдвэр:</span>
+                                                <span className="value">Honda</span>
+                                            </div>
+                                        </div>
+                                        <div className="content content2">
+                                            <MdSystemUpdateAlt />
+                                            <div className="contentChild">
+                                                <span className="value1">Орж ирсэн:</span>
+                                                <span className="value">2018 он</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="group1">
+                                        <div className="content">
+                                            <FaRegMoneyBillAlt />
+                                            <div className="contentChild">
+                                                <span className="value1">Үнэ:</span>
+                                                <span className="value">8сая 600мянга ₮</span>
+                                            </div>
+                                        </div>
+                                        <div className="content content2">
+                                            <MdUpdate />
+                                            <div className="contentChild">
+                                                <span className="value1">Үйлдвэрлэсэн:</span>
+                                                <span className="value">2012 он</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="group1">
+                                        <div className="content">
+                                            <GiCartwheel />
+                                            <div className="contentChild">
+                                                <span className="value1">Хөдөлгүүр:</span>
+                                                <span className="value">Цахилгаан</span>
+                                            </div>
+                                        </div>
+                                        <div className="content content2">
+                                            <GiPoliceCar />
+                                            <div className="contentChild">
+                                                <span className="value1">Марк:</span>
+                                                <span className="value">Adiu RX500</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="DescPAr">
+                                        <span>Toyota S Aqua 2014 /Сая орж ирсэн гааль бичигтэй 2020/
 
-                                -Ховор Үзмэн ягаан одтой гялгар
+                                        -Урьдчилгаа 2.6 сая төлөөд зээлээр аваарай сард 500K
 
-                                -4 B үнэлгээтэй /Auction бичиг байгаа/
+                                        -Ховор Үзмэн ягаан одтой гялгар
 
-                                -Гүйлт багатай 109,000
+                                        -4 B үнэлгээтэй /Auction бичиг байгаа/
 
-                                -Ямарч сэвгүй
+                                        -Гүйлт багатай 109,000
+
+                                        -Ямарч сэвгүй
                                 </span>
-                            </div>
-                        </div>
-                    </Col>
-                </Row>
+                                    </div>
+                                </div>
+                            </Col>
+
+                        </Row>
+                    </motion.div>
+
+                </motion.div>
 
             </Container>
         </div>

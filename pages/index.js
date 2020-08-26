@@ -3,14 +3,14 @@ import Header from '../conmponents/header'
 import HomeCon from '../conmponents/home'
 import Layout from '../conmponents/layout'
 import axios from 'axios'
-
+import { AnimatePresence } from 'framer-motion';
 
 export default function Home(props) {
 
   // const carsData = props.carsData
   // const apData = props.apartmentData
 
-
+  const { Component, pageProps } = props;
   return (
     <div className="Container">
       <Head>
@@ -46,7 +46,9 @@ export default function Home(props) {
       </Head>
 
       <Layout>
-        <HomeCon  />
+        <AnimatePresence exitBeforeEnter>
+          <HomeCon {...pageProps} />
+        </AnimatePresence>
       </Layout>
 
     </div>

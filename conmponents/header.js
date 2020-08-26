@@ -4,6 +4,7 @@ import { GoSearch } from 'react-icons/go'
 
 
 
+
 export class header extends Component {
     render() {
         return (
@@ -24,8 +25,8 @@ export class header extends Component {
                         <Link href="/cars">
                             <span>Car<div className="line1"></div></span>
                         </Link>
-
                     </div>
+                    
                     <div className="menuPar">
                         <Link href="/house">
                             <span>Apartment<div className="line1"></div></span>
