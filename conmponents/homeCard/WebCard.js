@@ -149,8 +149,6 @@ const captionOne = <div className="conPar" >
         <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
     </div>
 </div>
-
-
 const captionTwo = <div className="conPar" >
     {/* <div className="myImg" >
         <img src={require('../../image/car3.jpg')} />
@@ -374,10 +372,7 @@ export class WebCard extends Component {
                             </div>
                             <div className="conPar" >
                                 <div className="myImg" >
-
-
                                     <img src={require('../../image/car1.jpg')} />
-
                                 </div>
                                 <div className="textCon">
                                     <div className="onPar">

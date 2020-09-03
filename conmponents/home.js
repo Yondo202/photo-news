@@ -1,22 +1,22 @@
 import React, { Component } from 'react'
-import Link from 'next/link'
-import { Container, Row, Col } from 'react-bootstrap'
-import { GrFacebookOption } from 'react-icons/gr'
-import { AiOutlineTwitter, AiOutlineGooglePlus, AiFillInstagram } from 'react-icons/ai'
-import { TiSocialYoutubeCircular } from 'react-icons/ti'
-import { motion } from 'framer-motion'
+
 import WebCard from './homeCard/WebCard'
 import SimpleReactLightbox from "simple-react-lightbox";
-
+import HomeCar from '../conmponents/homeCard/homeCar'
+import HomeHouse from '../conmponents/homeCard/homeHouse'
 
 
 
 function home(props) {
 
     return (
-        <SimpleReactLightbox>
-            <WebCard />
-        </SimpleReactLightbox>
+        // <SimpleReactLightbox>
+        //     <WebCard />
+        // </SimpleReactLightbox>
+        < >
+            <HomeCar />
+            <HomeHouse />
+        </>
     )
 }
 

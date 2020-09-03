@@ -106,9 +106,6 @@ function AboutCars({ isVisible }) {
             >
                <div>hahahahhahahahah</div>
             </motion.div> */}
-
-
-
             <Container className="backCarPAr">
                 <motion.div initial="exit" animate="enter" exit="exit">
                     <motion.div variants={textVariants}>
@@ -125,10 +122,6 @@ function AboutCars({ isVisible }) {
 
                             </AliceCarousel> */}
                                 </div>
-
-
-
-
                                 {/* <div className="imagePar">
                             <img src={require('../../image/car1.jpg')} />
                         </div> */}

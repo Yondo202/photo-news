@@ -7,12 +7,11 @@ import { motion } from 'framer-motion'
 
 
 
-
 let easing = [0.5, 0.9, 0.16, 0.95];
 const textVariants = {
-    exit: { y: 100, opacity: 0.2, transition: { duration: 0.9, ease: easing } },
+    exit: { x: 300, opacity: 0.8, transition: { duration: 0.9, ease: easing } },
     enter: {
-        y: 0,
+        x: 0,
         opacity: 1,
         transition: { delay: 0.2, duration: 0.9, ease: easing }
     }

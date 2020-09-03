@@ -46,9 +46,9 @@ export default function Home(props) {
       </Head>
 
       <Layout>
-        <AnimatePresence exitBeforeEnter>
-          <HomeCon {...pageProps} />
-        </AnimatePresence>
+        {/* <AnimatePresence exitBeforeEnter> */}
+          <HomeCon  />
+        {/* </AnimatePresence> */}
       </Layout>
 
     </div>
