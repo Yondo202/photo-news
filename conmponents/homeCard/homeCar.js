@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 
 
@@ -42,7 +43,9 @@ function homeCar() {
                             </motion.div>
 
                             <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants2}>
-                                <button style={{marginTop:15}} type="button" >Хайх ...</button>
+                                <Link href="cars">
+                                    <button style={{ marginTop: 15 }} type="button" >Хайх ...</button>
+                                </Link>
                             </motion.div>
                         </div>
                     </div>

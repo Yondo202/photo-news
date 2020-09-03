@@ -2,7 +2,7 @@ import React from 'react'
 import { FaHome } from "react-icons/fa";
 import Link from 'next/link';
 import { AiOutlineHome, AiOutlineCar } from 'react-icons/ai';
-import { FaRegBuilding,  } from 'react-icons/fa';
+import { FaRegBuilding, } from 'react-icons/fa';
 import { FiFilter } from 'react-icons/fi';
 
 function footer() {
@@ -32,11 +32,13 @@ function footer() {
                 </div>
             </Link>
 
-            <div className="MenuPAr">
-                <FiFilter />
-                {/* <img src={require('../image/icons/filter.png')} /> */}
-                <div className="background"></div>
-            </div>
+            <Link href="aboutcars">
+                <div className="MenuPAr">
+                    <FiFilter />
+                    {/* <img src={require('../image/icons/filter.png')} /> */}
+                    <div className="background"></div>
+                </div>
+            </Link>
         </div>
     )
 }

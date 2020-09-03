@@ -51,7 +51,9 @@ function homeHouse() {
                                 <span>Бүх төрлийн байрны зар мэдээг эндээс</span>
                             </motion.div>
                             <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants2}>
-                                <button type="button" >Хайх ...</button>
+                                <Link href="house">
+                                    <button type="button" >Хайх ...</button>
+                                </Link>
                             </motion.div>
                         </div>
                     </div>
