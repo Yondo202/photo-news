@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { motion } from 'framer-motion'
-
+import Link from 'next/link'
 
 let easing = [0.5, 0.9, 0.16, 0.95];
 const textVariants = {
