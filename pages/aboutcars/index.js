@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Layout from '../../conmponents/layout'
-import OtherCars from '../../conmponents/cars/MainCars'
+import OtherCars from '../../conmponents/cars/otherCars'
 
 export default function Home() {
 

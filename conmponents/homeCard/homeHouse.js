@@ -29,8 +29,6 @@ const textVariants3 = {
     }
 };
 
-
-
 function homeHouse() {
     return (
         <Container className="HomeHouseParent">
@@ -62,5 +60,4 @@ function homeHouse() {
         </Container>
     )
 }
-
 export default homeHouse

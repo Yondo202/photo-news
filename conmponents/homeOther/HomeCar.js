@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 
 
 
-let easing = [0.5, 0.9, 0.16, 0.95];
+let easing = [0.5, 1, 0.16, 0.95];
 const textVariants = {
     exit: { x: 300, opacity: 0.8, transition: { duration: 0.9, ease: easing } },
     enter: {
@@ -269,19 +269,10 @@ export class WebCard extends Component {
     render() {
         return (
 
-
-
-
-
-
-
             <div className="WebNewsPar">
-
-                <SRLWrapper options={options} customCaptions={customCaptions}>
-                    <motion.div initial="exit" animate="enter" exit="exit">
-
+                <SRLWrapper options={options} customCaptions={customCaptions} >
+                    <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
                         <Slider {...settings}>
-                            <motion.div variants={textVariants}>
                                 <div className="conPar" >
                                     <div className="myImg" >
                                         <img src={require('../../image/car4.jpg')} />
@@ -314,9 +305,7 @@ export class WebCard extends Component {
                                         <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
                                     </div>
                                 </div>
-                            </motion.div>
 
-                            <motion.div variants={textVariants}>
                                 <div className="conPar" >
                                     <div className="myImg" >
 
@@ -352,7 +341,6 @@ export class WebCard extends Component {
                                         <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
                                     </div>
                                 </div>
-                            </motion.div>
 
                             <div className="conPar" >
                                 <div className="myImg" >

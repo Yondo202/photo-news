@@ -15,7 +15,6 @@ function footer() {
                     <div className="background"></div>
                 </div>
             </Link>
-
             <Link href="/cars">
                 <div className="MenuPAr">
                     <AiOutlineCar />
@@ -23,7 +22,6 @@ function footer() {
                     <div className="background"></div>
                 </div>
             </Link>
-
             <Link href="/house">
                 <div className="MenuPAr">
                     <FaRegBuilding />
@@ -31,7 +29,6 @@ function footer() {
                     <div className="background"></div>
                 </div>
             </Link>
-
             <Link href="aboutcars">
                 <div className="MenuPAr">
                     <FiFilter />

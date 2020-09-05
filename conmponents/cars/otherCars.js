@@ -16,7 +16,6 @@ const textVariants = {
     }
 };
 
-
 function otherCars() {
     return (
         <Container className="otherCarPar">
@@ -125,11 +124,9 @@ function otherCars() {
                             <Row>
                                 <Col lg={12} md={12} sm={12}>
                                     <div className="carsPar" style={{ marginBottom: 20 }}>
-
                                         <div className="imgPar">
                                             <img src={require('../../image/car11.png')} />
                                         </div>
-
                                         <div className="textAllPar">
                                             <div className="textConPar">
                                                 <span className="title">TOYOTA PRIUS 60</span>
@@ -157,7 +154,6 @@ function otherCars() {
                                                             </div>
                                                         </div>
                                                     </div>
-
                                                     <div className="group1">
                                                         <div className="content content2">
                                                             <MdUpdate />
@@ -182,11 +178,7 @@ function otherCars() {
                                                         </div>
                                                     </div>
                                                 </div>
-
-
                                             </div>
-
-
                                             <div className="MainMenuPar">
                                                 <span className="Price">5сая ‎₮</span>
                                                 <div>

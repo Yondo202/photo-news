@@ -79,33 +79,6 @@ function AboutCars({ isVisible }) {
     const handleOnDragStart = (e) => e.preventDefault()
     return (
         <div style={{ marginBottom: 50 }}>
-            {/* <motion.ul
-                className="container"
-                variants={container}
-                initial="hidden"
-                animate="visible"
-            >
-                <motion.div
-                    animate={{
-                        x: -100,
-                        y: 0,
-                        scale: 1,
-                        rotate: 0,
-                    }}s
-                >
-                    <h1>hahahahhah</h1>
-                    <h1>hahahahhah</h1>
-                    <h1>hahahahhah</h1>
-                    <h1>hahahahhah</h1>
-                </motion.div>
-            </motion.ul>
-
-            <motion.div
-                animate={{ x: 100 }}
-                transition={{ ease: "easeOut", duration: 1 }}
-            >
-               <div>hahahahhahahahah</div>
-            </motion.div> */}
             <Container className="backCarPAr">
                 <motion.div initial="exit" animate="enter" exit="exit">
                     <motion.div variants={textVariants}>
@@ -114,17 +87,7 @@ function AboutCars({ isVisible }) {
                             <Col md={7}>
                                 <div className="sliderPar">
                                     <ImageGallery items={myImage} thumbnailPosition={"left"} />
-                                    {/* <AliceCarousel mouseTrackingEnabled>
-                                <img src={require('../../image/car4.jpg')} onDragStart={handleOnDragStart} className="yours-custom-class" />
-                                <img src={require('../../image/car3.jpg')} onDragStart={handleOnDragStart} className="yours-custom-class" />
-                                <img src={require('../../image/car3.jpg')} onDragStart={handleOnDragStart} className="yours-custom-class" />
-                                <img src={require('../../image/car3.jpg')} onDragStart={handleOnDragStart} className="yours-custom-class" />
-
-                            </AliceCarousel> */}
                                 </div>
-                                {/* <div className="imagePar">
-                            <img src={require('../../image/car1.jpg')} />
-                        </div> */}
                             </Col>
                             <Col md={5}>
 
@@ -194,12 +157,9 @@ function AboutCars({ isVisible }) {
                                     </div>
                                 </div>
                             </Col>
-
                         </Row>
                     </motion.div>
-
                 </motion.div>
-
             </Container>
         </div>
     )

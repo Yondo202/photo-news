@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Layout from '../../conmponents/layout'
-import OtherHouse from '../../conmponents/house/otherHouse'
+import MainHouse from '../../conmponents/house/MainHouse'
+
 export default function Home() {
+
   return (
     <div className="Container">
       <Head>
@@ -19,6 +21,8 @@ export default function Home() {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
+
+
         <link
           rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -35,7 +39,7 @@ export default function Home() {
       </Head>
 
       <Layout>
-          <OtherHouse />
+          <MainHouse />
       </Layout>
 
     </div>

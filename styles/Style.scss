@@ -97,9 +97,10 @@ body {
                 font-weight: 600;
             }
             span {
-                margin-bottom: 12px;
+                // margin-bottom: 16px;
             }
             button {
+                margin-top: 15px;
                 border-style: none;
                 padding: 4px 25px;
                 background-color: $MainColor;
