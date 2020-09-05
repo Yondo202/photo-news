@@ -2,11 +2,11 @@ import Head from 'next/head'
 import Layout from '../../conmponents/layout'
 import HomeHouse from '../../conmponents/homeOther/HomeHouse'
 import SimpleReactLightbox from "simple-react-lightbox";
+import axios from 'axios'
 
 
-
-export default function Home() {
-
+export default function Home(props) {
+  // console.log(props.apartmentData, 'my Apartment Data')
   return (
     <div className="Container">
       <Head>
@@ -43,11 +43,17 @@ export default function Home() {
 
       <Layout >
         <SimpleReactLightbox >
-          <HomeHouse />
+          <HomeHouse apartmentData={props.apartmentData} />
         </SimpleReactLightbox>
       </Layout>
-
-
     </div>
   )
+}
+export async function getServerSideProps(){
+    const Apartment = await axios('https://photo-admin1.herokuapp.com/houses');
+
+    return{ props: {
+        apartmentData: Apartment.data
+      }
+    }
 }

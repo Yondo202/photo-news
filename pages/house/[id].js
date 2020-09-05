@@ -1,13 +1,14 @@
 import Head from 'next/head'
 import Layout from '../../conmponents/layout'
-import House from '../../conmponents/house/MainHouse' 
+import MainHouse from '../../conmponents/house/MainHouse'
+import Axios from 'axios'
 
-export default function Home() {
-
+export default function Home(props) {
+  // console.log(props.houseDatas)
   return (
     <div className="Container">
       <Head>
-        <title>Houses</title>
+        <title>Photo-News</title>
         <link rel="icon" href="/favicon.ico" />
 
         <link
@@ -39,9 +40,23 @@ export default function Home() {
       </Head>
 
       <Layout>
-            <House />
+          <MainHouse />
       </Layout>
 
     </div>
   )
 }
+
+// export async function getServerSideProps(context) {
+//   const { id } = context.query
+//   // const audioNews = await axios(`https://biz-admin.herokuapp.com/audio?id=${id}`);
+//   const houseDatas = await Axios(`https://photo-admin1.herokuapp.com/houses?id=${id}`)
+//   // const allData = await axios(`https://biz-admin.herokuapp.com/audio`);
+//   //  const data = await audioNews.json()
+//   console.log(id, ' this is id')
+//   return {
+//     props: {
+//       houseDatas: houseDatas.data
+//     }
+//   }
+// }

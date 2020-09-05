@@ -262,10 +262,9 @@ export class WebCard extends Component {
         }
     }
 
-
-
-
     render() {
+        const ApartmentData = this.props.apartmentData
+        console.log(ApartmentData[0].MainPhoto.url, 'my ap data')
         return (
             <div className="WebNewsPar">
                 <SRLWrapper options={options} customCaptions={customCaptions}>
@@ -274,7 +273,36 @@ export class WebCard extends Component {
 
                         <Slider {...settings}>
                             {/* <motion.div variants={textVariants}> */}
-                                <div className="conPar" >
+                            {ApartmentData.map((el, i) => {
+                                <div className="conPar" key={i} >
+                                    <div className="myImg" >
+                                        <img src={`${el.MainPhoto.url}`} />
+                                    </div>
+                                    <div className="textCon">
+                                        <div className="onPar">
+                                            <span className="VildverOn">2016</span>
+                                            <span className="OrjIrsenOn">2019</span>
+                                        </div>
+                                        <div className="titlePar">
+                                            <span className="title">ROYAL GARDEN</span>
+                                        </div>
+                                        <div className="line"></div>
+                                        <span className="price">55сая 600 мянга ₮</span>
+                                        <div className="VzvvleltPar">
+                                            <div className="VzvvleltCon">
+                                                <GoLocation />
+                                                <span>Баянзүрх</span>
+                                            </div>
+                                            <div className="VzvvleltCon">
+                                                <MdLocationCity />
+                                                <span>16-р хороолол</span>
+                                            </div>
+                                        </div>
+                                        <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
+                                    </div>
+                                </div>
+                            })}
+                            {/* <div className="conPar" >
                                     <div className="myImg" >
                                         <img src={require('../../image/car5.jpg')} />
                                     </div>
@@ -413,22 +441,17 @@ export class WebCard extends Component {
                                                 <MdLocationCity />
                                                 <span>16-р хороолол</span>
                                             </div>
-
-
                                         </div>
                                         <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
                                     </div>
-                                </div>
+                                </div> */}
+
+
+
                             {/* </motion.div> */}
-
-
-                           
-
                         </Slider>
                     </motion.div>
-
                 </SRLWrapper>
-
             </div>
         )
     }

@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import Layout from '../../conmponents/layout'
-import House from '../../conmponents/house/MainHouse' 
+import MainCars from '../../conmponents/cars/MainCars'
+
 
 export default function Home() {
-
   return (
     <div className="Container">
       <Head>
-        <title>Houses</title>
+        <title>Photo-News</title>
         <link rel="icon" href="/favicon.ico" />
 
         <link
@@ -29,7 +29,7 @@ export default function Home() {
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
           crossorigin="anonymous"
         />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet"></link>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"></link>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet"></link>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet"></link>
@@ -39,9 +39,8 @@ export default function Home() {
       </Head>
 
       <Layout>
-            <House />
+          <MainCars />
       </Layout>
-
     </div>
   )
 }

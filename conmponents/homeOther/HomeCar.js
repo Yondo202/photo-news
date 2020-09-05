@@ -16,7 +16,6 @@ const textVariants = {
         transition: { delay: 0.2, duration: 0.9, ease: easing }
     }
 };
-
 const settings = {
     autoplay: false,
     autoplaySpeed: 2500,
