@@ -10,9 +10,7 @@ import Link from 'next/link'
 
 
 function otherCars(props) {
-    // const apartmentData = props.apartmentData 
     const AllDatas = props.AllDatas
-    console.log(AllDatas, 'my my my ')
     return (
         <Container className="otherCarPar">
             <Row>

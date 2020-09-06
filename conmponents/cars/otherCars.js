@@ -18,9 +18,7 @@ const textVariants = {
 };
 
 function otherCars(props) {
-
     const AllDatas = props.AllDatas
-    // console.log(AllDatas, ' its my cars all data')
     return (
         <Container className="otherCarPar">
             <Row style={{ marginBottom: 70 }}>
@@ -188,7 +186,7 @@ function otherCars(props) {
                                                     </div>
                                                     <div className="MainMenuPar">
                                                         <span className="Price">{el.VneSay}сая ‎₮</span>
-                                                        <div>
+                                                        <div>           
                                                             <Link href="/aboutcars/[slug]" as={`/aboutcars/${el.slug}`}>
                                                                 <button type="button" >Дэлгэрэнгүй</button>
                                                             </Link>
@@ -198,7 +196,6 @@ function otherCars(props) {
                                             </div>
                                         </Col>
                                     </Row>
-
                                 )
                             })}
                         </motion.div>
