@@ -20,7 +20,7 @@ const textVariants = {
 function otherCars(props) {
 
     const AllDatas = props.AllDatas
-    console.log(AllDatas, ' its my cars all data')
+    // console.log(AllDatas, ' its my cars all data')
     return (
         <Container className="otherCarPar">
             <Row style={{ marginBottom: 70 }}>
@@ -123,11 +123,11 @@ function otherCars(props) {
                     </div>
                 </Col>
                 <Col lg={9} md={12} sm={12}>
+                    <motion.div initial="exit" animate="enter" exit="exit">
+                        <motion.div variants={textVariants}>
+                            {AllDatas.map((el, i) => {
+                                return (
 
-                    {AllDatas.map((el, i) => {
-                        return (
-                            <motion.div initial="exit" animate="enter" exit="exit">
-                                <motion.div variants={textVariants}>
                                     <Row key={i}>
                                         <Col lg={12} md={12} sm={12}>
                                             <div className="carsPar" style={{ marginBottom: 20 }}>
@@ -198,10 +198,11 @@ function otherCars(props) {
                                             </div>
                                         </Col>
                                     </Row>
-                                </motion.div>
-                            </motion.div>
-                        )
-                    })}
+
+                                )
+                            })}
+                        </motion.div>
+                    </motion.div>
                 </Col>
             </Row>
 

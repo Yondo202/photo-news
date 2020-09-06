@@ -61,8 +61,6 @@ function AboutCars(props) {
             }
         )
     })
-    const handleOnDragStart = (e) => e.preventDefault()
-
 
     return (
         <div style={{ marginBottom: 75 }}>
