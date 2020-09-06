@@ -1,7 +1,5 @@
 import Head from 'next/head'
 import Layout from '../../conmponents/layout'
-import OtherCars from '../../conmponents/cars/otherCars'
-
 export default function Home() {
 
   return (
@@ -39,7 +37,7 @@ export default function Home() {
       </Head>
 
       <Layout>
-          <OtherCars />
+          ""
       </Layout>
 
     </div>

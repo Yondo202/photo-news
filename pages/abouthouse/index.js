@@ -1,7 +1,5 @@
 import Head from 'next/head'
 import Layout from '../../conmponents/layout'
-import OtherHouse from '../../conmponents/house/otherHouse'
-import axios from 'axios'
 
 
 
@@ -39,9 +37,8 @@ export default function Home(props) {
       </Head>
 
       <Layout>
-          <OtherHouse />
+         ""
       </Layout>
-
     </div>
   )
 }
