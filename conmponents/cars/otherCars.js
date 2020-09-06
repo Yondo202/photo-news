@@ -130,7 +130,7 @@ function otherCars(props) {
                                         <Col lg={12} md={12} sm={12}>
                                             <div className="carsPar" style={{ marginBottom: 20 }}>
                                                 <div className="imgPar">
-                                                    <img src={require('../../image/car11.png')} />
+                                                    <img src={el.MainPhoto.url} />
                                                 </div>
                                                 <div className="textAllPar">
                                                     <div className="textConPar">
