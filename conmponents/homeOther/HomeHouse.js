@@ -9,6 +9,7 @@ import { AiOutlineWindows } from "react-icons/ai";
 import { FaParking } from "react-icons/fa";
 import { GoLocation } from "react-icons/go";
 import { GiStairs, GiFootyField } from "react-icons/gi";
+import Link from 'next/link';
 
 
 
@@ -26,9 +27,9 @@ const settings = {
     autoplay: false,
     autoplaySpeed: 2500,
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 1000,
-    slidesToShow: 4.5,
+    slidesToShow: 4,
     slidesToScroll: 2,
     arrows: true,
     lazyLoad: 'progressive',
@@ -41,7 +42,7 @@ const settings = {
                 autoplaySpeed: 2500,
                 slidesToShow: 3.5,
                 slidesToScroll: 2,
-                infinite: true,
+                infinite: false,
                 dots: false,
             }
         },
@@ -50,9 +51,9 @@ const settings = {
             settings: {
                 autoPlay: true,
                 autoplaySpeed: 2500,
-                slidesToShow: 3,
+                slidesToShow: 3.5,
                 slidesToScroll: 2,
-                infinite: true,
+                infinite: false,
                 dots: false,
             }
         },
@@ -63,7 +64,7 @@ const settings = {
                 autoplaySpeed: 2500,
                 slidesToShow: 2.5,
                 slidesToScroll: 1,
-                infinite: true,
+                infinite: false,
                 dots: false,
             }
         },
@@ -74,7 +75,7 @@ const settings = {
                 autoplaySpeed: 2500,
                 slidesToShow: 2,
                 slidesToScroll: 1,
-                infinite: true,
+                infinite: false,
                 dots: false,
             }
         },
@@ -83,9 +84,9 @@ const settings = {
             settings: {
                 autoPlay: true,
                 autoplaySpeed: 2500,
-                slidesToShow: 0.94,
+                slidesToShow: 0.8,
                 slidesToScroll: 1,
-                infinite: true,
+                infinite: false,
                 dots: false,
             }
         },
@@ -127,328 +128,93 @@ const options = {
     }
 };
 
-
-
-
-// const captionOne = <div class="myCustomCaptionOne">She found herself in a <span>forest...</span></div>
-// const captionTwo = <div class="myCustomCaptionTwo">...lost and wandering <span>she had to make a choice...</span></div>
-// const captionThree = <a href="www.simple-react-lightbox.dev" target="__blank" class="SRLCustomCaption myCustomButton">Make a choice</a>
-
-const captionOne = <div className="conPar" >
-    {/* <div className="myImg" >
-        <img src={require('../../image/car3.jpg')} />
-    </div> */}
-    <div className="textCon">
-        <div className="onPar">
-        </div>
-        <div className="titlePar">
-            <span className="title">TOYOTA PRIUS 20asdasd</span>
-        </div>
-        <div className="line"></div>
-        <span className="price">5сая 600 мянга ₮</span>
-        <div className="VzvvleltPar">
-            <div className="VzvvleltCon">
-                <GiAutoRepair />
-                <span>Баянзүрх</span>
-            </div>
-            <div className="VzvvleltCon">
-                <GiAutoRepair />
-                <span>Auto</span>
-            </div>
-            <div className="VzvvleltCon">
-                <GiCartwheel />
-                <span>Petrol</span>
-            </div>
-
-        </div>
-        <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-    </div>
-</div>
-
-
-const captionTwo = <div className="conPar" >
-    {/* <div className="myImg" >
-        <img src={require('../../image/car3.jpg')} />
-    </div> */}
-    <div className="textCon">
-        <div className="onPar">
-        </div>
-        <div className="titlePar">
-            <span className="title">TOYOTA PRIUS 20dddd</span>
-        </div>
-        <div className="line"></div>
-        <span className="price">5сая 600 мянга ₮</span>
-        <div className="VzvvleltPar">
-            <div className="VzvvleltCon">
-                <GoDashboard />
-                <span>30k</span>
-            </div>
-            <div className="VzvvleltCon">
-                <GiAutoRepair />
-                <span>Auto</span>
-            </div>
-            <div className="VzvvleltCon">
-                <GiCartwheel />
-                <span>Petrol</span>
-            </div>
-
-        </div>
-        <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-    </div>
-</div>
-
-const captionThree = <div className="conPar" >
-    {/* <div className="myImg" >
-        <img src={require('../../image/car3.jpg')} />
-    </div> */}
-    <div className="textCon">
-        <div className="onPar">
-        </div>
-        <div className="titlePar">
-            <span className="title">TOYOTA PRIUS 20</span>
-        </div>
-        <div className="line"></div>
-        <span className="price">5сая 600 мянга ₮</span>
-        <div className="VzvvleltPar">
-            <div className="VzvvleltCon">
-                <GoDashboard />
-                <span>30k</span>
-            </div>
-            <div className="VzvvleltCon">
-                <GiAutoRepair />
-                <span>Auto</span>
-            </div>
-            <div className="VzvvleltCon">
-                <GiCartwheel />
-                <span>Petrol</span>
-            </div>
-
-        </div>
-        <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-    </div>
-</div>
-
-
-
-const customCaptions = [
-    { id: 1, caption: captionOne },
-    { id: 2, caption: captionTwo },
-    { id: 3, caption: captionThree }
-]
-
-
-
-
-
-//functional component deer
-// const {openLightbox} = useLightbox()
-
-// <button onClick={() => openLightbox(props.index)}>
-// Open the lightbox at index
-// </button>
-
-
-
-
-
-
 export class WebCard extends Component {
-
     constructor(props) {
         super(props)
 
         this.state = {
-            className: 'haha'
         }
     }
-
     render() {
         const ApartmentData = this.props.apartmentData
-        console.log(ApartmentData[0].MainPhoto.url, 'my ap data')
+        console.log(ApartmentData, 'my ap data')
+        const customCaptions = ApartmentData.map((el, i) => {
+            return (
+                <div className="conPar" key={i} >
+                    <div className="textCon">
+                        <div className="onPar">
+                        </div>
+                        <div className="titlePar">
+                            <span className="title">{el.Garchig}</span>
+                        </div>
+                        <div className="line"></div>
+                        <span className="price">{`${el.VneSay}сая ${el.VneMynga}мянга`}₮</span>
+                        <div className="VzvvleltPar">
+                            <div className="VzvvleltCon">
+                                <GoLocation />
+                                <span>{el.Dvvreg}</span>
+                            </div>
+                            <div className="VzvvleltCon">
+                                <MdLocationCity />
+                                <span>{el.Bairlal}</span>
+                            </div>
+                            {/* <div className="VzvvleltCon">
+                                <GiCartwheel />
+                                <span>Petrol</span>
+                            </div> */}
+                        </div>
+                        <Link href="/abouthouse/[slug]" as={`/abouthouse/${el.slug}`}>
+                            <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
+                        </Link>
+                    </div>
+                </div>
+            )
+        })
         return (
             <div className="WebNewsPar">
-                <SRLWrapper options={options} customCaptions={customCaptions}>
-
+                <SRLWrapper options={options} customCaptions={customCaptions.map((el, i) => {
+                    return (
+                        {
+                            id: i,
+                            caption: el
+                        }
+                    )
+                })}>
                     <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
-
                         <Slider {...settings}>
-                            {/* <motion.div variants={textVariants}> */}
                             {ApartmentData.map((el, i) => {
-                                <div className="conPar" key={i} >
-                                    <div className="myImg" >
-                                        <img src={`${el.MainPhoto.url}`} />
-                                    </div>
-                                    <div className="textCon">
-                                        <div className="onPar">
-                                            <span className="VildverOn">2016</span>
-                                            <span className="OrjIrsenOn">2019</span>
+                                return (
+                                    <div className="conPar" key={i} >
+                                        <div className="myImg" >
+                                            <img src={el.MainPhoto.url} />
                                         </div>
-                                        <div className="titlePar">
-                                            <span className="title">ROYAL GARDEN</span>
-                                        </div>
-                                        <div className="line"></div>
-                                        <span className="price">55сая 600 мянга ₮</span>
-                                        <div className="VzvvleltPar">
-                                            <div className="VzvvleltCon">
-                                                <GoLocation />
-                                                <span>Баянзүрх</span>
+                                        <div className="textCon">
+                                            <div className="onPar">
+                                                <span className="VildverOn">2016</span>
+                                                <span className="OrjIrsenOn">2019</span>
                                             </div>
-                                            <div className="VzvvleltCon">
-                                                <MdLocationCity />
-                                                <span>16-р хороолол</span>
+                                            <div className="titlePar">
+                                                <span className="title">{el.Garchig}</span>
                                             </div>
+                                            <div className="line"></div>
+                                            <span className="price">{`${el.VneSay}сая ${el.VneMynga}мянга`}₮</span>
+                                            <div className="VzvvleltPar">
+                                                <div className="VzvvleltCon">
+                                                    <GoLocation />
+                                                    <span>{el.Dvvreg}</span>
+                                                </div>
+                                                <div className="VzvvleltCon">
+                                                    <MdLocationCity />
+                                                    <span>{el.Bairlal}</span>
+                                                </div>
+                                            </div>
+                                            <Link href="/abouthouse/[slug]" as={`/abouthouse/${el.slug}`}>
+                                                <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
+                                            </Link>
                                         </div>
-                                        <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
                                     </div>
-                                </div>
+                                )
                             })}
-                            {/* <div className="conPar" >
-                                    <div className="myImg" >
-                                        <img src={require('../../image/car5.jpg')} />
-                                    </div>
-                                    <div className="textCon">
-                                        <div className="onPar">
-                                            <span className="VildverOn">2016</span>
-                                            <span className="OrjIrsenOn">2019</span>
-                                        </div>
-                                        <div className="titlePar">
-                                            <span className="title">ROYAL GARDEN</span>
-                                        </div>
-                                        <div className="line"></div>
-                                        <span className="price">55сая 600 мянга ₮</span>
-                                        <div className="VzvvleltPar">
-                                            <div className="VzvvleltCon">
-                                                <GoLocation />
-                                                <span>Баянзүрх</span>
-                                            </div>
-                                            <div className="VzvvleltCon">
-                                                <MdLocationCity />
-                                                <span>16-р хороолол</span>
-                                            </div>
-
-
-                                        </div>
-                                        <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-                                    </div>
-                                </div>
-                                <div className="conPar" >
-                                    <div className="myImg" >
-                                        <img src={require('../../image/car5.jpg')} />
-                                    </div>
-                                    <div className="textCon">
-                                        <div className="onPar">
-                                            <span className="VildverOn">2016</span>
-                                            <span className="OrjIrsenOn">2019</span>
-                                        </div>
-                                        <div className="titlePar">
-                                            <span className="title">ROYAL GARDEN</span>
-                                        </div>
-                                        <div className="line"></div>
-                                        <span className="price">55сая 600 мянга ₮</span>
-                                        <div className="VzvvleltPar">
-                                            <div className="VzvvleltCon">
-                                                <GoLocation />
-                                                <span>Баянзүрх</span>
-                                            </div>
-                                            <div className="VzvvleltCon">
-                                                <MdLocationCity />
-                                                <span>16-р хороолол</span>
-                                            </div>
-
-
-                                        </div>
-                                        <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-                                    </div>
-                                </div>
-                                <div className="conPar" >
-                                    <div className="myImg" >
-                                        <img src={require('../../image/car5.jpg')} />
-                                    </div>
-                                    <div className="textCon">
-                                        <div className="onPar">
-                                            <span className="VildverOn">2016</span>
-                                            <span className="OrjIrsenOn">2019</span>
-                                        </div>
-                                        <div className="titlePar">
-                                            <span className="title">ROYAL GARDEN</span>
-                                        </div>
-                                        <div className="line"></div>
-                                        <span className="price">55сая 600 мянга ₮</span>
-                                        <div className="VzvvleltPar">
-                                            <div className="VzvvleltCon">
-                                                <GoLocation />
-                                                <span>Баянзүрх</span>
-                                            </div>
-                                            <div className="VzvvleltCon">
-                                                <MdLocationCity />
-                                                <span>16-р хороолол</span>
-                                            </div>
-
-
-                                        </div>
-                                        <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-                                    </div>
-                                </div>
-                                <div className="conPar" >
-                                    <div className="myImg" >
-                                        <img src={require('../../image/car5.jpg')} />
-                                    </div>
-                                    <div className="textCon">
-                                        <div className="onPar">
-                                            <span className="VildverOn">2016</span>
-                                            <span className="OrjIrsenOn">2019</span>
-                                        </div>
-                                        <div className="titlePar">
-                                            <span className="title">ROYAL GARDEN</span>
-                                        </div>
-                                        <div className="line"></div>
-                                        <span className="price">55сая 600 мянга ₮</span>
-                                        <div className="VzvvleltPar">
-                                            <div className="VzvvleltCon">
-                                                <GoLocation />
-                                                <span>Баянзүрх</span>
-                                            </div>
-                                            <div className="VzvvleltCon">
-                                                <MdLocationCity />
-                                                <span>16-р хороолол</span>
-                                            </div>
-
-
-                                        </div>
-                                        <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-                                    </div>
-                                </div>
-                                <div className="conPar" >
-                                    <div className="myImg" >
-                                        <img src={require('../../image/car5.jpg')} />
-                                    </div>
-                                    <div className="textCon">
-                                        <div className="onPar">
-                                            <span className="VildverOn">2016</span>
-                                            <span className="OrjIrsenOn">2019</span>
-                                        </div>
-                                        <div className="titlePar">
-                                            <span className="title">ROYAL GARDEN</span>
-                                        </div>
-                                        <div className="line"></div>
-                                        <span className="price">55сая 600 мянга ₮</span>
-                                        <div className="VzvvleltPar">
-                                            <div className="VzvvleltCon">
-                                                <GoLocation />
-                                                <span>Баянзүрх</span>
-                                            </div>
-                                            <div className="VzvvleltCon">
-                                                <MdLocationCity />
-                                                <span>16-р хороолол</span>
-                                            </div>
-                                        </div>
-                                        <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-                                    </div>
-                                </div> */}
-
-
-
-                            {/* </motion.div> */}
                         </Slider>
                     </motion.div>
                 </SRLWrapper>
@@ -458,20 +224,3 @@ export class WebCard extends Component {
 }
 
 export default WebCard
-
-
-
-
-// import React, { Component } from 'react'
-
-// export class WebCard extends Component {
-//     render() {
-//         return (
-//             <div>
-
-//             </div>
-//         )
-//     }
-// }
-
-// export default WebCard

@@ -6,10 +6,13 @@ import { FaParking } from "react-icons/fa";
 import { GoLocation } from "react-icons/go";
 import { MdLocationCity } from "react-icons/md";
 import { GiStairs, GiFootyField } from "react-icons/gi";
+import Link from 'next/link'
 
 
-
-function otherCars() {
+function otherCars(props) {
+    // const apartmentData = props.apartmentData 
+    const AllDatas = props.AllDatas
+    console.log(AllDatas, 'my my my ')
     return (
         <Container className="otherCarPar">
             <Row>
@@ -92,70 +95,77 @@ function otherCars() {
                 <Col lg={9} md={12} sm={12}>
                     <Row>
                         <Col lg={12} md={12} sm={12}>
-                            <div className="carsPar" style={{ marginBottom: 20 }}>
-                                <div className="imgPar">
-                                    <img src={require('../../image/car11.png')} />
-                                </div>
-                                <div className="textAllPar">
-                                    <div className="textConPar">
-                                        <span className="title">3өрөө Байр зарна</span>
-                                        <div className="group1Par">
-                                            <div className="group1">
-                                                <div className="content">
-                                                    <GiStairs />
-                                                    <div className="contentChild">
-                                                        <span className="value1">Давхар:</span>
-                                                        <span className="value">8 давхарт</span>
+
+                            {AllDatas.map((el, i) => {
+                                return (
+                                    <div key={i} className="carsPar" style={{ marginBottom: 20 }}>
+                                        <div className="imgPar">
+                                            <img src={`${el.MainPhoto.url}`} />
+                                        </div>
+                                        <div className="textAllPar">
+                                            <div className="textConPar">
+                                                <span className="title">{el.Garchig}</span>
+                                                <div className="group1Par">
+                                                    <div className="group1">
+                                                        <div className="content">
+                                                            <GiStairs />
+                                                            <div className="contentChild">
+                                                                <span className="value1">Давхар:</span>
+                                                                <span className="value">4 давхарт</span>
+                                                            </div>
+                                                        </div>
+                                                        <div className="content content2">
+                                                            <GiFootyField />
+                                                            <div className="contentChild">
+                                                                <span className="value1">Талбай:</span>
+                                                                <span className="value">66.3 м²</span>
+                                                            </div>
+                                                        </div>
+                                                        <div className="content content2">
+                                                            <GoLocation />
+                                                            <div className="contentChild">
+                                                                <span className="value1">Дүүрэг:</span>
+                                                                <span className="value">{el.Dvvreg}</span>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div className="content content2">
-                                                    <GiFootyField />
-                                                    <div className="contentChild">
-                                                        <span className="value1">Талбай:</span>
-                                                        <span className="value">66.3 м²</span>
-                                                    </div>
-                                                </div>
-                                                <div className="content content2">
-                                                    <GoLocation />
-                                                    <div className="contentChild">
-                                                        <span className="value1">Дүүрэг:</span>
-                                                        <span className="value">Баянзүрх</span>
+                                                    <div className="group1">
+                                                        <div className="content content2">
+                                                            <MdLocationCity />
+                                                            <div className="contentChild">
+                                                                <span className="value1">Байрлал:</span>
+                                                                <span className="value">{el.Bairlal}</span>
+                                                            </div>
+                                                        </div>
+                                                        <div className="content">
+                                                            <FaParking />
+                                                            <div className="contentChild">
+                                                                <span className="value1">Гараж:</span>
+                                                                <span className="value">Байхгүй</span>
+                                                            </div>
+                                                        </div>
+                                                        <div className="content content2">
+                                                            <AiOutlineWindows />
+                                                            <div className="contentChild">
+                                                                <span className="value1">Цонх:</span>
+                                                                <span className="value">4</span>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="group1">
-                                                <div className="content content2">
-                                                    <MdLocationCity />
-                                                    <div className="contentChild">
-                                                        <span className="value1">Байрлал:</span>
-                                                        <span className="value">3-р хороолол</span>
-                                                    </div>
-                                                </div>
-                                                <div className="content">
-                                                    <FaParking />
-                                                    <div className="contentChild">
-                                                        <span className="value1">Гараж:</span>
-                                                        <span className="value">Байхгүй</span>
-                                                    </div>
-                                                </div>
-                                                <div className="content content2">
-                                                    <AiOutlineWindows />
-                                                    <div className="contentChild">
-                                                        <span className="value1">Цонх:</span>
-                                                        <span className="value">4</span>
-                                                    </div>
+                                            <div className="MainMenuPar">
+                                                <span className="Price">5сая ‎₮</span>
+                                                <div>
+                                                    <Link href="/abouthouse/[slug]" as={`/abouthouse/${el.slug}`}>
+                                                        <button type="button" >Дэлгэрэнгүй</button>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="MainMenuPar">
-                                        <span className="Price">5сая ‎₮</span>
-                                        <div>
-                                            <button type="button" >Дэлгэрэнгүй</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                )
+                            })}
                         </Col>
                     </Row>
                 </Col>

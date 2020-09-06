@@ -149,7 +149,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     .SRLStage {
-        backdrop-filter: blur(12px);
+        backdrop-filter: blur(18px);
         .SRLThumbnailsContainer {
             display: none;
         }
@@ -242,7 +242,7 @@ body {
                                 padding-top: 8px;
                                 padding-bottom: 4px;
                                 .title {
-                                    color: white;
+                                    color: black;
                                     font-size: 20px;
                                     font-weight: 600;
                                 }
@@ -431,19 +431,20 @@ body {
 
 .WebNewsPar {
     width: 100%;
-    height: 75vh;
+    height: 73vh;
     overflow: hidden;
     .slick-slider {
         .slick-slide {
             padding: 20px 5px;
-            margin-right: 50px;
+            // margin-right: 40px;
+            margin-left: 40px;
             .slick-list {
-                width: 200%;
+                width: 100%;
             }
         }
     }
     .conPar {
-        width: 100%;
+        width: 97% !important;
         -webkit-box-shadow: 1px 7px 20px -7px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 1px 7px 20px -7px rgba(0, 0, 0, 0.75);
         box-shadow: 1px 6px 20px -7px rgba(0, 0, 0, 0.75);
@@ -548,7 +549,7 @@ body {
                 background-color: $MainColor;
                 color: white;
                 border-radius: 6px;
-                margin-bottom: 8px;
+                margin-bottom: 16px;
                 transition: all 0.3s ease;
                 &:hover {
                     font-weight: 600;
@@ -1546,7 +1547,7 @@ body {
         .conPar {
             margin-right: 30px;
             position: relative;
-            width: 80% !important;
+            width: 80%;
             -webkit-box-shadow: 1px 7px 20px -7px rgba(0, 0, 0, 0.75);
             -moz-box-shadow: 1px 7px 20px -7px rgba(0, 0, 0, 0.75);
             box-shadow: 1px 6px 20px -7px rgba(0, 0, 0, 0.75);

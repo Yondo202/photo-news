@@ -1,7 +1,11 @@
 import Head from 'next/head'
 import Layout from '../../conmponents/layout'
 import OtherHouse from '../../conmponents/house/otherHouse'
-export default function Home() {
+import axios from 'axios'
+
+
+
+export default function Home(props) {
   return (
     <div className="Container">
       <Head>
@@ -35,9 +39,19 @@ export default function Home() {
       </Head>
 
       <Layout>
-          <OtherHouse />
+          <OtherHouse apartmentData={props.apartmentData} />
       </Layout>
 
     </div>
   )
+}
+
+
+export async function getServerSideProps(){
+  const Apartment = await axios('https://photo-admin1.herokuapp.com/houses');
+
+  return{ props: {
+      apartmentData: Apartment.data
+    }
+  }
 }

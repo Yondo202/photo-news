@@ -50,32 +50,20 @@ const textVariants = {
 
 
 
-function AboutCars({ isVisible }) {
+function AboutCars(props) {
 
-    const myImage = [
-        {
-            original: `${require('../../image/car4.jpg')}`,
-            thumbnail: `${require('../../image/car4.jpg')}`
-        },
-        {
-            original: `${require('../../image/car4.jpg')}`,
-            thumbnail: `${require('../../image/car4.jpg')}`
-        },
-        {
-            original: `${require('../../image/car4.jpg')}`,
-            thumbnail: `${require('../../image/car4.jpg')}`
-        },
-        {
-            original: `${require('../../image/car4.jpg')}`,
-            thumbnail: `${require('../../image/car4.jpg')}`
-        },
-        {
-            original: `${require('../../image/car4.jpg')}`,
-            thumbnail: `${require('../../image/car4.jpg')}`
-        },
-    ]
+    const carsDAta = props.carsDAta
+    console.log(carsDAta, ' my Cars Data')
+    const imgData = carsDAta[0].OtherPhoto
 
-
+    const myImage = imgData.map((el,i)=>{
+        return(
+            {
+                original: el.url,
+                thumbnail: el.url
+            }
+        )
+    })
     const handleOnDragStart = (e) => e.preventDefault()
     return (
         <div style={{ marginBottom: 50 }}>
@@ -92,20 +80,20 @@ function AboutCars({ isVisible }) {
                             <Col md={5}>
 
                                 <div className="textPar">
-                                    <h4 className="title">TOYOTA PRIUS 20</h4>
+                                    <h4 className="title">{carsDAta[0].Garchig}</h4>
                                     <div className="group1">
                                         <div className="content">
                                             <RiMastercardLine />
                                             <div className="contentChild">
                                                 <span className="value1">Үйлдвэр:</span>
-                                                <span className="value">Honda</span>
+                                                <span className="value">{carsDAta[0].Vildver}</span>
                                             </div>
                                         </div>
                                         <div className="content content2">
                                             <MdSystemUpdateAlt />
                                             <div className="contentChild">
                                                 <span className="value1">Орж ирсэн:</span>
-                                                <span className="value">2018 он</span>
+                                                <span className="value">{carsDAta[0].OrjIsenOn} он</span>
                                             </div>
                                         </div>
                                     </div>
@@ -114,14 +102,14 @@ function AboutCars({ isVisible }) {
                                             <FaRegMoneyBillAlt />
                                             <div className="contentChild">
                                                 <span className="value1">Үнэ:</span>
-                                                <span className="value">8сая 600мянга ₮</span>
+                                                <span className="value">{carsDAta[0].VneSay}сая ₮</span>
                                             </div>
                                         </div>
                                         <div className="content content2">
                                             <MdUpdate />
                                             <div className="contentChild">
                                                 <span className="value1">Үйлдвэрлэсэн:</span>
-                                                <span className="value">2012 он</span>
+                                                <span className="value">{carsDAta[0].VildverlesenOn} он</span>
                                             </div>
                                         </div>
                                     </div>
@@ -130,30 +118,19 @@ function AboutCars({ isVisible }) {
                                             <GiCartwheel />
                                             <div className="contentChild">
                                                 <span className="value1">Хөдөлгүүр:</span>
-                                                <span className="value">Цахилгаан</span>
+                                                <span className="value">{carsDAta[0].Hodolgvvr}</span>
                                             </div>
                                         </div>
                                         <div className="content content2">
                                             <GiPoliceCar />
                                             <div className="contentChild">
                                                 <span className="value1">Марк:</span>
-                                                <span className="value">Adiu RX500</span>
+                                                <span className="value">{carsDAta[0].Vildver}</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="DescPAr">
-                                        <span>Toyota S Aqua 2014 /Сая орж ирсэн гааль бичигтэй 2020/
-
-                                        -Урьдчилгаа 2.6 сая төлөөд зээлээр аваарай сард 500K
-
-                                        -Ховор Үзмэн ягаан одтой гялгар
-
-                                        -4 B үнэлгээтэй /Auction бичиг байгаа/
-
-                                        -Гүйлт багатай 109,000
-
-                                        -Ямарч сэвгүй
-                                </span>
+                                        <span> {carsDAta[0].Tailbar}</span>
                                     </div>
                                 </div>
                             </Col>

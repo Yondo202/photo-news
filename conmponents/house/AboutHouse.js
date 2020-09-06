@@ -13,8 +13,6 @@ import { GiStairs, GiFootyField } from "react-icons/gi";
 
 
 
-
-
 let easing = [0.5, 0.9, 0.16, 0.95];
 const textVariants = {
     exit: { y: 100, opacity: 0.2, transition: { duration: 0.9, ease: easing } },
@@ -46,62 +44,28 @@ const item = {
     }
 };
 
-function AboutCars({ isVisible }) {
+function AboutCars(props) {
 
-    const myImage = [
-        {
-            original: `${require('../../image/car4.jpg')}`,
-            thumbnail: `${require('../../image/car4.jpg')}`
-        },
-        {
-            original: `${require('../../image/car4.jpg')}`,
-            thumbnail: `${require('../../image/car4.jpg')}`
-        },
-        {
-            original: `${require('../../image/car4.jpg')}`,
-            thumbnail: `${require('../../image/car4.jpg')}`
-        },
-        {
-            original: `${require('../../image/car4.jpg')}`,
-            thumbnail: `${require('../../image/car4.jpg')}`
-        },
-        {
-            original: `${require('../../image/car4.jpg')}`,
-            thumbnail: `${require('../../image/car4.jpg')}`
-        },
 
-    ]
 
+    console.log(props.houseDatas, 'this my house slug data');
+    const houseDatas = props.houseDatas
+    const imagesData = houseDatas[0].OtherPhotos
+    console.log(imagesData, 'my image data')
+
+    const myImage = imagesData.map((el, i) => {
+        return (
+            {
+                original:   el.url,
+                thumbnail:  el.url
+            }
+        )
+    })
     const handleOnDragStart = (e) => e.preventDefault()
+
+
     return (
         <div style={{ marginBottom: 75 }}>
-            {/* <motion.ul
-                className="container"
-                variants={container}
-                initial="hidden"
-                animate="visible"
-            >
-                <motion.div
-                    animate={{
-                        x: -100,
-                        y: 0,
-                        scale: 1,
-                        rotate: 0,
-                    }}
-                >
-                    <h1>hahahahhah</h1>
-                    <h1>hahahahhah</h1>
-                    <h1>hahahahhah</h1>
-                    <h1>hahahahhah</h1>
-                </motion.div>
-            </motion.ul>
-
-            <motion.div
-                animate={{ x: 100 }}
-                transition={{ ease: "easeOut", duration: 1 }}
-            >
-               <div>hahahahhahahahah</div>
-            </motion.div> */}
             <Container className="backCarPAr">
                 <motion.div initial="exit" animate="enter" exit="exit">
                     <motion.div variants={textVariants}>
@@ -110,13 +74,10 @@ function AboutCars({ isVisible }) {
                                 <div className="sliderPar">
                                     <ImageGallery items={myImage} thumbnailPosition={"left"} />
                                 </div>
-                                {/* <div className="imagePar">
-                            <img src={require('../../image/car1.jpg')} />
-                        </div> */}
                             </Col>
                             <Col md={5}>
                                 <div className="textPar">
-                                    <h4 className="title">TOYOTA PRIUS 20</h4>
+                                    <h4 className="title">{houseDatas[0].Garchig}</h4>
                                     <div className="group1">
                                         <div className="content">
                                             <GiStairs />
@@ -138,7 +99,7 @@ function AboutCars({ isVisible }) {
                                             <FaRegMoneyBillAlt />
                                             <div className="contentChild">
                                                 <span className="value1">Үнэ:</span>
-                                                <span className="value">80 сая ₮</span>
+                                                <span className="value">{houseDatas[0].VneSay}сая ₮</span>
                                             </div>
                                         </div>
                                         <div className="content content2">
@@ -154,28 +115,20 @@ function AboutCars({ isVisible }) {
                                             <GoLocation />
                                             <div className="contentChild">
                                                 <span className="value1">Дүүрэг:</span>
-                                                <span className="value">Баянзүрх</span>
+                                                <span className="value">{houseDatas[0].Dvvreg}</span>
                                             </div>
                                         </div>
                                         <div className="content content2">
                                             <MdLocationCity />
                                             <div className="contentChild">
                                                 <span className="value1">Байрлал:</span>
-                                                <span className="value">16-р хороолол</span>
+                                                <span className="value">{houseDatas[0].Bairlal}</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="DescPAr">
-                                        <span>Бзд 16 хороололд
-
-                                        ~31.6 мкв 1 өрөө байр зарна. ~Сургууль, цэцэрлэг, өрх хороо, зах худалдааны төв, автобусны буудал гээд бүх үйлчилгээдээ ойрхон
-
-                                        ~ өвөлдөө маш дулаахан
-
-                                        ~гаднаа тоглоомын талбайтай
-
-                                        ~машины зогсоолтой
-                                </span>
+                                        <span>{houseDatas[0].Tailbar}
+                                        </span>
                                     </div>
                                 </div>
                             </Col>

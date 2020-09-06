@@ -4,7 +4,7 @@ import { GoDashboard } from 'react-icons/go'
 import { GiAutoRepair, GiCartwheel } from 'react-icons/gi'
 import { SRLWrapper, useLightbox } from "simple-react-lightbox";
 import { motion } from 'framer-motion'
-
+import Link from 'next/link'
 
 
 let easing = [0.5, 1, 0.16, 0.95];
@@ -20,7 +20,7 @@ const settings = {
     autoplay: false,
     autoplaySpeed: 2500,
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 1000,
     slidesToShow: 4.5,
     slidesToScroll: 2,
@@ -35,7 +35,7 @@ const settings = {
                 autoplaySpeed: 2500,
                 slidesToShow: 3.5,
                 slidesToScroll: 2,
-                infinite: true,
+                infinite: false,
                 dots: false,
             }
         },
@@ -46,7 +46,7 @@ const settings = {
                 autoplaySpeed: 2500,
                 slidesToShow: 3,
                 slidesToScroll: 2,
-                infinite: true,
+                infinite: false,
                 dots: false,
             }
         },
@@ -57,7 +57,7 @@ const settings = {
                 autoplaySpeed: 2500,
                 slidesToShow: 2.5,
                 slidesToScroll: 1,
-                infinite: true,
+                infinite: false,
                 dots: false,
             }
         },
@@ -68,7 +68,7 @@ const settings = {
                 autoplaySpeed: 2500,
                 slidesToShow: 2,
                 slidesToScroll: 1,
-                infinite: true,
+                infinite: false,
                 dots: false,
             }
         },
@@ -77,9 +77,9 @@ const settings = {
             settings: {
                 autoPlay: true,
                 autoplaySpeed: 2500,
-                slidesToShow: 0.94,
+                slidesToShow: 0.8,
                 slidesToScroll: 1,
-                infinite: true,
+                infinite: false,
                 dots: false,
             }
         },
@@ -122,130 +122,6 @@ const options = {
 };
 
 
-
-
-// const captionOne = <div class="myCustomCaptionOne">She found herself in a <span>forest...</span></div>
-// const captionTwo = <div class="myCustomCaptionTwo">...lost and wandering <span>she had to make a choice...</span></div>
-// const captionThree = <a href="www.simple-react-lightbox.dev" target="__blank" class="SRLCustomCaption myCustomButton">Make a choice</a>
-
-const captionOne = <div className="conPar" >
-    {/* <div className="myImg" >
-        <img src={require('../../image/car3.jpg')} />
-    </div> */}
-    <div className="textCon">
-        <div className="onPar">
-        </div>
-        <div className="titlePar">
-            <span className="title">TOYOTA PRIUS 20asdasd</span>
-        </div>
-        <div className="line"></div>
-        <span className="price">5сая 600 мянга ₮</span>
-        <div className="VzvvleltPar">
-            <div className="VzvvleltCon">
-                <GoDashboard />
-                <span>30k</span>
-            </div>
-            <div className="VzvvleltCon">
-                <GiAutoRepair />
-                <span>Auto</span>
-            </div>
-            <div className="VzvvleltCon">
-                <GiCartwheel />
-                <span>Petrol</span>
-            </div>
-
-        </div>
-        <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-    </div>
-</div>
-
-
-const captionTwo = <div className="conPar" >
-    {/* <div className="myImg" >
-        <img src={require('../../image/car3.jpg')} />
-    </div> */}
-    <div className="textCon">
-        <div className="onPar">
-        </div>
-        <div className="titlePar">
-            <span className="title">TOYOTA PRIUS 20dddd</span>
-        </div>
-        <div className="line"></div>
-        <span className="price">5сая 600 мянга ₮</span>
-        <div className="VzvvleltPar">
-            <div className="VzvvleltCon">
-                <GoDashboard />
-                <span>30k</span>
-            </div>
-            <div className="VzvvleltCon">
-                <GiAutoRepair />
-                <span>Auto</span>
-            </div>
-            <div className="VzvvleltCon">
-                <GiCartwheel />
-                <span>Petrol</span>
-            </div>
-
-        </div>
-        <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-    </div>
-</div>
-
-const captionThree = <div className="conPar" >
-    {/* <div className="myImg" >
-        <img src={require('../../image/car3.jpg')} />
-    </div> */}
-    <div className="textCon">
-        <div className="onPar">
-        </div>
-        <div className="titlePar">
-            <span className="title">TOYOTA PRIUS 20</span>
-        </div>
-        <div className="line"></div>
-        <span className="price">5сая 600 мянга ₮</span>
-        <div className="VzvvleltPar">
-            <div className="VzvvleltCon">
-                <GoDashboard />
-                <span>30k</span>
-            </div>
-            <div className="VzvvleltCon">
-                <GiAutoRepair />
-                <span>Auto</span>
-            </div>
-            <div className="VzvvleltCon">
-                <GiCartwheel />
-                <span>Petrol</span>
-            </div>
-
-        </div>
-        <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-    </div>
-</div>
-
-
-
-const customCaptions = [
-    { id: 1, caption: captionOne },
-    { id: 2, caption: captionTwo },
-    { id: 3, caption: captionThree }
-]
-
-
-
-
-
-//functional component deer
-// const {openLightbox} = useLightbox()
-
-// <button onClick={() => openLightbox(props.index)}>
-// Open the lightbox at index
-// </button>
-
-
-
-
-
-
 export class WebCard extends Component {
 
     constructor(props) {
@@ -266,263 +142,93 @@ export class WebCard extends Component {
 
 
     render() {
+        console.log(this.props.CarsData, 'this my cars data')
+        const CarsData = this.props.CarsData
+        const customCaptions = CarsData.map((el, i) => {
+            return (
+                <div className="conPar" key={i} >
+                    <div className="textCon">
+                        <div className="onPar">
+                        </div>
+                        <div className="titlePar">
+                            <span className="title">{el.Garchig}</span>
+                        </div>
+                        <div className="line"></div>
+                        <span className="price">{`${el.VneSay}сая ${el.VneMynga}мянга`}₮</span>
+                        <div className="VzvvleltPar">
+                            <div className="VzvvleltCon">
+                                <GoDashboard />
+                                <span>{el.Vildver}</span>
+                            </div>
+                            <div className="VzvvleltCon">
+                                <GiAutoRepair />
+                                <span>{el.Hodolgvvr}</span>
+                            </div>
+                            {/* <div className="VzvvleltCon">
+                                <GiCartwheel />
+                                <span>Petrol</span>
+                            </div> */}
+                        </div>
+                        <Link href="/aboutcars/[slug]" as={`/aboutcars/${el.slug}`}>
+                            <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
+                        </Link>
+                    </div>
+                </div>
+            )
+        })
         return (
-
             <div className="WebNewsPar">
-                <SRLWrapper options={options} customCaptions={customCaptions} >
+                <SRLWrapper options={options} customCaptions={customCaptions.map((el, i) => {
+                    return (
+                        {
+                            id: i,
+                            caption: el
+                        }
+                    )
+                })} >
                     <motion.div initial="exit" animate="enter" exit="exit" variants={textVariants}>
                         <Slider {...settings}>
-                                <div className="conPar" >
-                                    <div className="myImg" >
-                                        <img src={require('../../image/car4.jpg')} />
-                                    </div>
-                                    <div className="textCon">
-                                        <div className="onPar">
-                                            <span className="VildverOn">2016</span>
-                                            <span className="OrjIrsenOn">2019</span>
+                            {CarsData.map((el, i) => {
+                                return (
+                                    <div className="conPar" key={i}>
+                                        <div className="myImg" >
+                                            <img src={`${el.MainPhoto.url}`} />
                                         </div>
-                                        <div className="titlePar">
-                                            <span className="title">TOYOTA PRIUS 20</span>
-                                        </div>
-                                        <div className="line"></div>
-                                        <span className="price">5сая 600 мянга ₮</span>
-                                        <div className="VzvvleltPar">
-                                            <div className="VzvvleltCon">
-                                                <GoDashboard />
-                                                <span>30k</span>
+                                        <div className="textCon">
+                                            <div className="onPar">
+                                                <span className="VildverOn">{el.VildverlesenOn}</span>
+                                                <span className="OrjIrsenOn">{el.OrjIsenOn}</span>
                                             </div>
-                                            <div className="VzvvleltCon">
-                                                <GiAutoRepair />
-                                                <span>Auto</span>
+                                            <div className="titlePar">
+                                                <span className="title">{el.Garchig}</span>
                                             </div>
-                                            <div className="VzvvleltCon">
-                                                <GiCartwheel />
-                                                <span>Petrol</span>
+                                            <div className="line"></div>
+                                            <span className="price">{`${el.VneSay}сая ${el.VneMynga}мянга`}₮</span>
+                                            <div className="VzvvleltPar">
+                                                <div className="VzvvleltCon">
+                                                    <GoDashboard />
+                                                    <span>{el.Vildver}</span>
+                                                </div>
+                                                <div className="VzvvleltCon">
+                                                    <GiAutoRepair />
+                                                    <span>{el.Hodolgvvr}</span>
+                                                </div>
+                                                {/* <div className="VzvvleltCon">
+                                                    <GiCartwheel />
+                                                    <span>{el.Hodolgvvr}</span>
+                                                </div> */}
                                             </div>
-
+                                            <Link href="/aboutcars/[slug]" as={`/aboutcars/${el.slug}`}>
+                                                <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
+                                            </Link>
                                         </div>
-                                        <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
                                     </div>
-                                </div>
-
-                                <div className="conPar" >
-                                    <div className="myImg" >
-
-
-                                        <img src={require('../../image/car4.jpg')} />
-
-                                    </div>
-                                    <div className="textCon">
-                                        <div className="onPar">
-                                            <span className="VildverOn">2016</span>
-                                            <span className="OrjIrsenOn">2019</span>
-                                        </div>
-                                        <div className="titlePar">
-                                            <span className="title">TOYOTA PRIUS 20</span>
-                                        </div>
-                                        <div className="line"></div>
-                                        <span className="price">5сая 600 мянга ₮</span>
-                                        <div className="VzvvleltPar">
-                                            <div className="VzvvleltCon">
-                                                <GoDashboard />
-                                                <span>30k</span>
-                                            </div>
-                                            <div className="VzvvleltCon">
-                                                <GiAutoRepair />
-                                                <span>Auto</span>
-                                            </div>
-                                            <div className="VzvvleltCon">
-                                                <GiCartwheel />
-                                                <span>Petrol</span>
-                                            </div>
-
-                                        </div>
-                                        <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-                                    </div>
-                                </div>
-
-                            <div className="conPar" >
-                                <div className="myImg" >
-
-
-                                    <img src={require('../../image/car3.jpg')} />
-
-                                </div>
-                                <div className="textCon">
-                                    <div className="onPar">
-                                        <span className="VildverOn">2016</span>
-                                        <span className="OrjIrsenOn">2019</span>
-                                    </div>
-                                    <div className="titlePar">
-                                        <span className="title">TOYOTA PRIUS 20</span>
-                                    </div>
-                                    <div className="line"></div>
-                                    <span className="price">5сая 600 мянга ₮</span>
-                                    <div className="VzvvleltPar">
-                                        <div className="VzvvleltCon">
-                                            <GoDashboard />
-                                            <span>30k</span>
-                                        </div>
-                                        <div className="VzvvleltCon">
-                                            <GiAutoRepair />
-                                            <span>Auto</span>
-                                        </div>
-                                        <div className="VzvvleltCon">
-                                            <GiCartwheel />
-                                            <span>Petrol</span>
-                                        </div>
-
-                                    </div>
-                                    <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-                                </div>
-                            </div>
-                            <div className="conPar" >
-                                <div className="myImg" >
-
-
-                                    <img src={require('../../image/car1.jpg')} />
-
-                                </div>
-                                <div className="textCon">
-                                    <div className="onPar">
-                                        <span className="VildverOn">2016</span>
-                                        <span className="OrjIrsenOn">2019</span>
-                                    </div>
-                                    <div className="titlePar">
-                                        <span className="title">TOYOTA PRIUS 20</span>
-                                    </div>
-                                    <div className="line"></div>
-                                    <span className="price">5сая 600 мянга ₮</span>
-                                    <div className="VzvvleltPar">
-                                        <div className="VzvvleltCon">
-                                            <GoDashboard />
-                                            <span>30k</span>
-                                        </div>
-                                        <div className="VzvvleltCon">
-                                            <GiAutoRepair />
-                                            <span>Auto</span>
-                                        </div>
-                                        <div className="VzvvleltCon">
-                                            <GiCartwheel />
-                                            <span>Petrol</span>
-                                        </div>
-
-                                    </div>
-                                    <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-                                </div>
-                            </div>
-                            <div className="conPar" >
-                                <div className="myImg" >
-
-
-                                    <img src={require('../../image/car4.jpg')} />
-
-                                </div>
-                                <div className="textCon">
-                                    <div className="onPar">
-                                        <span className="VildverOn">2016</span>
-                                        <span className="OrjIrsenOn">2019</span>
-                                    </div>
-                                    <div className="titlePar">
-                                        <span className="title">TOYOTA PRIUS 20</span>
-                                    </div>
-                                    <div className="line"></div>
-                                    <span className="price">5сая 600 мянга ₮</span>
-                                    <div className="VzvvleltPar">
-                                        <div className="VzvvleltCon">
-                                            <GoDashboard />
-                                            <span>30k</span>
-                                        </div>
-                                        <div className="VzvvleltCon">
-                                            <GiAutoRepair />
-                                            <span>Auto</span>
-                                        </div>
-                                        <div className="VzvvleltCon">
-                                            <GiCartwheel />
-                                            <span>Petrol</span>
-                                        </div>
-
-                                    </div>
-                                    <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-                                </div>
-                            </div>
-                            <div className="conPar" >
-                                <div className="myImg" >
-
-
-                                    <img src={require('../../image/car5.jpg')} />
-
-                                </div>
-                                <div className="textCon">
-                                    <div className="onPar">
-                                        <span className="VildverOn">2016</span>
-                                        <span className="OrjIrsenOn">2019</span>
-                                    </div>
-                                    <div className="titlePar">
-                                        <span className="title">TOYOTA PRIUS 20</span>
-                                    </div>
-                                    <div className="line"></div>
-                                    <span className="price">5сая 600 мянга ₮</span>
-                                    <div className="VzvvleltPar">
-                                        <div className="VzvvleltCon">
-                                            <GoDashboard />
-                                            <span>30k</span>
-                                        </div>
-                                        <div className="VzvvleltCon">
-                                            <GiAutoRepair />
-                                            <span>Auto</span>
-                                        </div>
-                                        <div className="VzvvleltCon">
-                                            <GiCartwheel />
-                                            <span>Petrol</span>
-                                        </div>
-
-                                    </div>
-                                    <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-                                </div>
-                            </div>
-                            <div className="conPar" >
-                                <div className="myImg" >
-
-
-                                    <img src={require('../../image/car3.jpg')} />
-
-                                </div>
-                                <div className="textCon">
-                                    <div className="onPar">
-                                        <span className="VildverOn">2016</span>
-                                        <span className="OrjIrsenOn">2019</span>
-                                    </div>
-                                    <div className="titlePar">
-                                        <span className="title">TOYOTA PRIUS 20</span>
-                                    </div>
-                                    <div className="line"></div>
-                                    <span className="price">5сая 600 мянга ₮</span>
-                                    <div className="VzvvleltPar">
-                                        <div className="VzvvleltCon">
-                                            <GoDashboard />
-                                            <span>30k</span>
-                                        </div>
-                                        <div className="VzvvleltCon">
-                                            <GiAutoRepair />
-                                            <span>Auto</span>
-                                        </div>
-                                        <div className="VzvvleltCon">
-                                            <GiCartwheel />
-                                            <span>Petrol</span>
-                                        </div>
-
-                                    </div>
-                                    <button type="button" className="Delgerengui">Дэлгэрэнгүй</button>
-                                </div>
-                            </div>
-
+                                )
+                            })}
                         </Slider>
                     </motion.div>
                 </SRLWrapper>
-
             </div >
-
         )
     }
 }

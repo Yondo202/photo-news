@@ -28,6 +28,7 @@ export class header extends Component {
                     </div>
                     
                     <div className="menuPar">
+                    {/* <Link key={i} href='/posts/[slug]' as={`/posts/${el.slug}`}> */}
                         <Link href="/house">
                             <span>Apartment<div className="line1"></div></span>
                         </Link>

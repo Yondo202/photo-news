@@ -4,7 +4,6 @@ import HomeHouse from '../../conmponents/homeOther/HomeHouse'
 import SimpleReactLightbox from "simple-react-lightbox";
 import axios from 'axios'
 
-
 export default function Home(props) {
   // console.log(props.apartmentData, 'my Apartment Data')
   return (
@@ -24,8 +23,6 @@ export default function Home(props) {
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
-
-
         <link
           rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -51,7 +48,6 @@ export default function Home(props) {
 }
 export async function getServerSideProps(){
     const Apartment = await axios('https://photo-admin1.herokuapp.com/houses');
-
     return{ props: {
         apartmentData: Apartment.data
       }

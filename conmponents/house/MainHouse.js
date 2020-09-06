@@ -2,11 +2,11 @@ import React from 'react'
 import AboutHouse from './AboutHouse'
 import OtherHouse from './otherHouse'
 
-function MainCars() {
+function MainCars(props) {
     return (
         <>
-            <AboutHouse /> 
-            <OtherHouse />
+            <AboutHouse houseDatas={props.houseDatas} /> 
+            <OtherHouse AllDatas={props.AllDatas}/>
         </>
     )
 }
