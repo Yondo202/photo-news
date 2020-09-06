@@ -51,10 +51,6 @@ export async function getServerSideProps(context) {
     const { slug } = context.query
     const houseDatas = await Axios(`https://photo-admin1.herokuapp.com/houses?slug=${slug}`)
     const AllDatas = await Axios(`https://photo-admin1.herokuapp.com/houses`)
-    // const audioNews = await axios(`https://biz-admin.herokuapp.com/audio?id=${id}`);
-    // const allData = await axios(`https://biz-admin.herokuapp.com/audio`);
-    //  const data = await audioNews.json()
-    //   console.log(id, ' this is id')
     return {
         props: {
             houseDatas: houseDatas.data,

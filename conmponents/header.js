@@ -38,7 +38,6 @@ export class header extends Component {
                         <input type="text" placeholder="search.." />
                         <GoSearch />
                     </div>
-
                     <button type="button">Sign In</button>
                 </div>
             </div>

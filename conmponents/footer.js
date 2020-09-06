@@ -29,7 +29,7 @@ function footer() {
                     <div className="background"></div>
                 </div>
             </Link>
-            <Link href="aboutcars">
+            <Link href="/aboutcars/[slug]" as={`/aboutcars/car-1`}>
                 <div className="MenuPAr">
                     <FiFilter />
                     {/* <img src={require('../image/icons/filter.png')} /> */}

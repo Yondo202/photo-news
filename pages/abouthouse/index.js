@@ -39,19 +39,10 @@ export default function Home(props) {
       </Head>
 
       <Layout>
-          <OtherHouse apartmentData={props.apartmentData} />
+          <OtherHouse />
       </Layout>
 
     </div>
   )
 }
 
-
-export async function getServerSideProps(){
-  const Apartment = await axios('https://photo-admin1.herokuapp.com/houses');
-
-  return{ props: {
-      apartmentData: Apartment.data
-    }
-  }
-}
