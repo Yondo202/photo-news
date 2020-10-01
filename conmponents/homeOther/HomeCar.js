@@ -17,10 +17,10 @@ const textVariants = {
     }
 };
 const settings = {
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 2500,
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 1000,
     slidesToShow: 4.5,
     slidesToScroll: 2,
@@ -35,7 +35,7 @@ const settings = {
                 autoplaySpeed: 2500,
                 slidesToShow: 3.5,
                 slidesToScroll: 2,
-                infinite: false,
+                infinite: true,
                 dots: false,
             }
         },
@@ -46,7 +46,7 @@ const settings = {
                 autoplaySpeed: 2500,
                 slidesToShow: 3,
                 slidesToScroll: 2,
-                infinite: false,
+                infinite: true,
                 dots: false,
             }
         },
@@ -57,7 +57,7 @@ const settings = {
                 autoplaySpeed: 2500,
                 slidesToShow: 2.5,
                 slidesToScroll: 1,
-                infinite: false,
+                infinite: true,
                 dots: false,
             }
         },
@@ -68,7 +68,7 @@ const settings = {
                 autoplaySpeed: 2500,
                 slidesToShow: 2,
                 slidesToScroll: 1,
-                infinite: false,
+                infinite: true,
                 dots: false,
             }
         },
@@ -77,9 +77,9 @@ const settings = {
             settings: {
                 autoPlay: true,
                 autoplaySpeed: 2500,
-                slidesToShow: 0.8,
+                slidesToShow: 1,
                 slidesToScroll: 1,
-                infinite: false,
+                infinite: true,
                 dots: false,
             }
         },

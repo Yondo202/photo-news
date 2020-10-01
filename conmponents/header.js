@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Link from 'next/link'
 import { GoSearch } from 'react-icons/go'
-
+import SearchInp from '../conmponents/search'
 
 
 
@@ -33,9 +33,9 @@ export class header extends Component {
                             <span>Apartment<div className="line1"></div></span>
                         </Link>
                     </div>
-
                     <div className="searchPAr">
                         <input type="text" placeholder="search.." />
+                        {/* <SearchInp /> */}
                         <GoSearch />
                     </div>
                     <button type="button">Sign In</button>
