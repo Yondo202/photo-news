@@ -65,7 +65,7 @@ body {
     }
     .ImagePar {
         img {
-            width: 100%;
+            width: 80%;
         }
         .background {
             height: 600px;
@@ -122,19 +122,19 @@ body {
     .ImagePar {
         img {
             height: 300px;
-            width: 100%;
+            width: 80%;
             object-fit: cover;
         }
         .background {
-            height: 410px;
-            width: 650px;
+            height: 390px;
+            width: 600px;
             background-color: $MainColor;
             opacity: 0.2;
             position: absolute;
             bottom: -30px;
             left: -140px;
             // border-radius: 70% 0% 10% 20%;
-            border-radius: 10% 60% 40% 10%;
+            border-radius: 10% 65% 30% 10%;
             z-index: -1;
         }
     }
