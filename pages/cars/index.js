@@ -50,7 +50,7 @@ export default function Home(props) {
 }
 
 
-export async function getServerSideProps(){
+export async function getStaticProps(){
   const CarsData = await axios('https://photo-admin1.herokuapp.com/cars');
   return{ props: {
     CarsData: CarsData.data

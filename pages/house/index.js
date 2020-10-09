@@ -46,7 +46,7 @@ export default function Home(props) {
     </div>
   )
 }
-export async function getServerSideProps(){
+export async function getStaticProps(){
     const Apartment = await axios('https://photo-admin1.herokuapp.com/houses');
     return{ props: {
         apartmentData: Apartment.data
